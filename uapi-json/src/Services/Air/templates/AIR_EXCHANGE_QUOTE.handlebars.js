@@ -1,7 +1,7 @@
 module.exports = `
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
-        <air:AirExchangeQuoteReq TraceId="{{requestId}}"
+        <air:AirExchangeQuoteReq TraceId="mastermind"
                 xmlns:air="http://www.travelport.com/schema/air_v47_0"
                 xmlns:com="http://www.travelport.com/schema/common_v47_0"
                 AuthorizedBy="user"

@@ -6,14 +6,14 @@ module.exports = `
     <soap:Body>
         {{#if async}}
         <air:LowFareSearchAsynchReq
-            AuthorizedBy="user" TraceId="{{requestId}}" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
             ReturnUpsellFare="true"
             xmlns:air="http://www.travelport.com/schema/air_v47_0"
             xmlns:com="http://www.travelport.com/schema/common_v47_0"
             >
         {{else}}
         <air:LowFareSearchReq
-            AuthorizedBy="user" TraceId="{{requestId}}" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
             ReturnUpsellFare="true"
             {{#if solutionResult}}
             SolutionResult="true"
@@ -32,6 +32,9 @@ module.exports = `
                     <com:CityOrAirport Code="{{to}}" PreferCity="true"/>
                 </air:SearchDestination>
                 <air:SearchDepTime PreferredTime="{{departureDate}}"/>
+                
+                {{#if ../permittedConnectionPoints}}
+
                 <air:AirLegModifiers>
                     {{#*inline "connectionPoint"}}
                       <com:ConnectionPoint>
@@ -62,15 +65,8 @@ module.exports = `
                     {{/each}}
                     </air:PreferredConnectionPoints>
                     {{/if}}
-                
-                    {{#if ../cabins}}
-                    <air:PreferredCabins>
-                        {{#each ../cabins}}
-                        <com:CabinClass Type="{{this}}"/>
-                        {{/each}}
-                    </air:PreferredCabins>
+                    </air:AirLegModifiers>
                     {{/if}}
-                </air:AirLegModifiers>
             </air:SearchAirLeg>
             {{/legs}}
             <air:AirSearchModifiers
@@ -100,14 +96,26 @@ module.exports = `
                     {{/each}}
                 </air:PreferredCarriers>
                 {{/if}}
+                {{#if isCabin}}
+                    <air:PreferredCabins>
+                        <com:CabinClass Type="{{isCabin}}"/>
+                    </air:PreferredCabins>
+                {{/if}}
             </air:AirSearchModifiers>
             {{#passengers}}
-            <com:SearchPassenger Code="{{ageCategory}}"{{#if child}} Age="9"{{/if}} xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+            <com:SearchPassenger 
+                BookingTravelerRef="mastermind_{{UUniqueID}}" 
+                Code="{{ageCategory}}"
+                {{#if child}} Age="9"{{/if}} 
+                {{#if infantWOS}} Age="1"{{/if}} 
+                {{#if infantWS}} Age="1"{{/if}} 
+                xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
             {{/passengers}}
             {{#if pricing}}
             <air:AirPricingModifiers
-                {{#if pricing.currency}}
-                CurrencyType="{{pricing.currency}}"
+                FaresIndicator = "PublicFaresOnly"
+                {{#if AgentCurrency}}
+                    CurrencyType="{{AgentCurrency}}"
                 {{/if}}
 
                 {{#if pricing.eTicketability}}

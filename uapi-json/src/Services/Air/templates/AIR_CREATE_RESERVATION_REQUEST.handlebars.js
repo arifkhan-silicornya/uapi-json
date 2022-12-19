@@ -8,8 +8,8 @@ module.exports = `
     </soap:Header>
     <soap:Body>
         <univ:AirCreateReservationReq
-            AuthorizedBy="user" TraceId="{{requestId}}"
-            RetainReservation="Both" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="mastermind"
+            RetainReservation="None" TargetBranch="{{TargetBranch}}"
             {{#if rule}}RuleName="{{rule}}"{{/if}}
             {{#if UniversalRecordLocatorCode}} UniversalRecordLocatorCode="{{UniversalRecordLocatorCode}}" {{/if}}
             {{#if allowWaitlist}}RestrictWaitlist="false"{{else}}RestrictWaitlist="true"{{/if}}
@@ -25,32 +25,35 @@ module.exports = `
             {{#each passengers}}
             <com:BookingTraveler Key="P_{{@index}}" Age="{{Age}}" DOB="{{DOB}}" Gender="{{gender}}" TravelerType="{{ageCategory}}">
                 <com:BookingTravelerName First="{{firstName}}" Last="{{lastName}}" {{#if title}}Prefix="{{title}}"{{/if}}/>
-                {{#if ../deliveryInformation}}
-                <com:DeliveryInfo>
-                    <com:ShippingAddress>
-                        <com:AddressName>{{ ../deliveryInformation.name}}</com:AddressName>
-                        <com:Street>{{ ../deliveryInformation.street}}</com:Street>
-                        <com:City>{{ ../deliveryInformation.city}}</com:City>
-                        <com:PostalCode>{{ ../deliveryInformation.zip}}</com:PostalCode>
-                        <com:Country>{{ ../deliveryInformation.country}}</com:Country>
-                    </com:ShippingAddress>
-                </com:DeliveryInfo>
-                {{/if}}
+                
+                {{#if firstADT}}
+                    {{#if ../deliveryInformation}}
+                    <com:DeliveryInfo>
+                        <com:ShippingAddress>
+                            <com:AddressName>{{ ../deliveryInformation.name}}</com:AddressName>
+                            <com:Street>{{ ../deliveryInformation.street}}</com:Street>
+                            <com:City>{{ ../deliveryInformation.city}}</com:City>
+                            <com:PostalCode>{{ ../deliveryInformation.zip}}</com:PostalCode>
+                            <com:Country>{{ ../deliveryInformation.country}}</com:Country>
+                        </com:ShippingAddress>
+                    </com:DeliveryInfo>
+                    {{/if}}
 
-                {{#if ../phone}}
-                    <com:PhoneNumber
-                            CountryCode="{{../phone.countryCode}}"
-                            Location="{{../phone.location}}"
-                            Number="{{../phone.number}}"
-                            Type="Other"
-                    />
-                {{/if}}
+                    {{#if ../phone}}
+                        <com:PhoneNumber
+                                CountryCode="{{../phone.countryCode}}"
+                                Location="{{../phone.location}}"
+                                Number="{{../phone.number}}"
+                                Type="Other"
+                        />
+                    {{/if}}
+                    
+                    {{#if firstADT}}
+                    {{#if ../email}}
+                        <com:Email EmailID="{{../email}}" Type="Home" />
+                    {{/if}}
+                    {{/if}}
 
-                {{#if ../email}}
-                    <com:Email
-                            EmailID="{{../email}}"
-                            Type="Other"
-                    />
                 {{/if}}
                 {{#ssr}}
                     {{#equal type "FQTV"}}
@@ -61,7 +64,12 @@ module.exports = `
                 {{/ssr}}
                 {{#if isChild}}
                 <com:NameRemark Key="P_{{@index}}">
-                    <com:RemarkData>P-{{ageCategory}} DOB{{dobString}}</com:RemarkData>
+                    <com:RemarkData>DOB{{dobString}}</com:RemarkData>
+                </com:NameRemark>
+                {{/if}}
+                {{#if isInfant}}
+                <com:NameRemark Key="P_{{@index}}">
+                    <com:RemarkData>{{dobString}}</com:RemarkData>
                 </com:NameRemark>
                 {{/if}}
             </com:BookingTraveler>
