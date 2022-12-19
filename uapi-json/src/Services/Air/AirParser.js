@@ -40,7 +40,7 @@ const searchLowFaresValidate = (obj) => {
         throw new AirParsingError.ResponseDataMissing({ missing: 'AirPricePoint or AirPricingSolution' });
     }
 
-    const rootArrays = ['AirSegment', 'FareInfo', 'FlightDetails', 'Route','AirPricePoint'];
+    const rootArrays = ['AirSegment', 'FareInfo', 'FlightDetails', 'Route'];
 
     rootArrays.forEach((name) => {
         const airName = 'air:' + name + 'List';

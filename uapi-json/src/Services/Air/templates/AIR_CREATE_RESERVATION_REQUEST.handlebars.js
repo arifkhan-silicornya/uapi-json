@@ -8,7 +8,7 @@ module.exports = `
     </soap:Header>
     <soap:Body>
         <univ:AirCreateReservationReq
-            AuthorizedBy="mastermind" TraceId="mastermind"
+            AuthorizedBy="user" TraceId="mastermind"
             RetainReservation="Both" TargetBranch="{{TargetBranch}}"
             {{#if rule}}RuleName="{{rule}}"{{/if}}
             {{#if UniversalRecordLocatorCode}} UniversalRecordLocatorCode="{{UniversalRecordLocatorCode}}" {{/if}}

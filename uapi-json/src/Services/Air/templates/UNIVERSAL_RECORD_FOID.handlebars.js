@@ -7,7 +7,7 @@ module.exports = `
   >
   <soapenv:Header/>
   <soapenv:Body>
-    <univ:UniversalRecordModifyReq AuthorizedBy="mastermind" TargetBranch="{{TargetBranch}}" Version="{{version}}">
+    <univ:UniversalRecordModifyReq AuthorizedBy="user" TargetBranch="{{TargetBranch}}" Version="{{version}}">
       <com:BillingPointOfSaleInfo OriginApplication="UAPI"/>
       {{#if emulatePcc}}
       <com:OverridePCC ProviderCode="{{provider}}" PseudoCityCode="{{emulatePcc}}"/>

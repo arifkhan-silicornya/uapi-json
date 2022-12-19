@@ -5,7 +5,7 @@ module.exports = `
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
         <air:RetrieveLowFareSearchReq
-            AuthorizedBy="mastermind" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
             ProviderCode="{{providerCode}}"
             SearchId="{{searchId}}"
             xmlns:air="http://www.travelport.com/schema/air_v47_0"

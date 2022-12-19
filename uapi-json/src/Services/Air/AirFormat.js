@@ -236,46 +236,34 @@ function formatFarePricingInfo(fare) {
     const changePenalty = {};
     const cancelPenalty = {};
 
-    
     if (Object.prototype.hasOwnProperty.call(fare, 'air:ChangePenalty')) {
-        const [fsKey] = Object.keys(fare['air:ChangePenalty']);
-        const thisPrcFare = fare['air:ChangePenalty'][fsKey];
         const fareChangePenalty = fare['air:ChangePenalty'];
 
         if (typeof fareChangePenalty['air:Amount'] !== 'undefined') {
             changePenalty.amount = fareChangePenalty['air:Amount'];
-            changePenalty.PenaltyApplies= thisPrcFare.PenaltyApplies;
         }
         if (typeof fareChangePenalty['air:Percentage'] !== 'undefined') {
             changePenalty.percentage = fareChangePenalty['air:Percentage'];
-            changePenalty.PenaltyApplies= thisPrcFare.PenaltyApplies;
         }
         if (typeof fareChangePenalty.PenaltyApplies !== 'undefined') {
             changePenalty.penaltyApplies = fareChangePenalty.PenaltyApplies;
-            changePenalty.PenaltyApplies= thisPrcFare.PenaltyApplies;
         }
     }
 
     if (Object.prototype.hasOwnProperty.call(fare, 'air:CancelPenalty')) {
         const fareCancelPenalty = fare['air:CancelPenalty'];
-        const [fstKey] = Object.keys(fare['air:CancelPenalty']);
-        const thisPrcFare2 = fare['air:CancelPenalty'][fstKey];
 
         if (typeof fareCancelPenalty['air:Amount'] !== 'undefined') {
             cancelPenalty.amount = fareCancelPenalty['air:Amount'];
-            fareCancelPenalty.PenaltyApplies= thisPrcFare2.PenaltyApplies;
         }
         if (typeof fareCancelPenalty['air:Percentage'] !== 'undefined') {
             cancelPenalty.percentage = fareCancelPenalty['air:Percentage'];
-            fareCancelPenalty.PenaltyApplies= thisPrcFare2.PenaltyApplies;
         }
         if (typeof fareCancelPenalty.PenaltyApplies !== 'undefined') {
             cancelPenalty.penaltyApplies = fareCancelPenalty.PenaltyApplies;
-            fareCancelPenalty.PenaltyApplies= thisPrcFare2.PenaltyApplies;
         }
         if (typeof fareCancelPenalty.NoShow !== 'undefined') {
             cancelPenalty.noShow = fareCancelPenalty.NoShow;
-            fareCancelPenalty.PenaltyApplies= thisPrcFare2.PenaltyApplies;
         }
     }
 
@@ -331,16 +319,7 @@ function formatLowFaresSearch(searchRequest, searchResult) {
         if (!thisFare.PlatingCarrier) {
             return;
         }
-        if (!thisFare.LatestTicketingTime) {
-            return "";
-        }
-        if (!thisFare.PricingMethod) {
-            return "";
-        }
-        if (!thisFare.ETicketability) {
-            return "";
-        }
-        
+
         let directions = [];
         if (isSolutionResult) {
             if (Object.prototype.toString.call(price['air:Journey']) === '[object Object]') {
@@ -374,12 +353,8 @@ function formatLowFaresSearch(searchRequest, searchResult) {
                     to: trips[trips.length - 1].to,
                     duration: leg.TravelTime,
                     // TODO get overnight stops, etc from connection
-                    AirPricingInfo_Key: thisFare.Key,
                     platingCarrier: thisFare.PlatingCarrier,
                     Refundable: thisFare.Refundable,
-                    pricingMethod:thisFare.PricingMethod,
-                    Cat35Indicator:thisFare.Cat35Indicator,
-                    pricingInfo:formatFarePricingInfo(thisFare),
                     segments: trips,
                 }];
             });
@@ -417,12 +392,8 @@ function formatLowFaresSearch(searchRequest, searchResult) {
                     to: direction.Destination,
                     // duration
                     // TODO get overnight stops, etc from connection
-                    AirPricingInfo_Key: thisFare.Key,
                     platingCarrier: thisFare.PlatingCarrier,
                     Refundable: thisFare.Refundable,
-                    pricingMethod:thisFare.PricingMethod,
-                    Cat35Indicator:thisFare.Cat35Indicator,
-                    pricingInfo:formatFarePricingInfo(thisFare),
                     segments: trips,
                 };
             }));
@@ -431,17 +402,11 @@ function formatLowFaresSearch(searchRequest, searchResult) {
         const { passengerCounts, passengerFares } = this.formatPassengerCategories(price['air:AirPricingInfo']);
 
         const result = {
-            AirPricingInfo_Key: thisFare.Key,
             totalPrice: price.TotalPrice,
             basePrice: price.BasePrice,
             taxes: price.Taxes,
             platingCarrier: thisFare.PlatingCarrier,
             Refundable: thisFare.Refundable,
-            pricingMethod:thisFare.PricingMethod,
-            Cat35Indicator:thisFare.Cat35Indicator,
-            pricingInfo:formatFarePricingInfo(thisFare),
-            TransactionId:searchResult.TransactionId,
-            TraceId:searchResult.TraceId,
             directions,
             bookingComponents: [{
                 totalPrice: price.TotalPrice,

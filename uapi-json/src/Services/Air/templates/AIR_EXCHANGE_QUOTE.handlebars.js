@@ -4,7 +4,7 @@ module.exports = `
         <air:AirExchangeQuoteReq TraceId="mastermind"
                 xmlns:air="http://www.travelport.com/schema/air_v47_0"
                 xmlns:com="http://www.travelport.com/schema/common_v47_0"
-                AuthorizedBy="mastermind"
+                AuthorizedBy="user"
                 TargetBranch="{{TargetBranch}}">
 
             <com:BillingPointOfSaleInfo

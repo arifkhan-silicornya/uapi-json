@@ -8,7 +8,7 @@ module.exports = `
   <soapenv:Header/>
   <soapenv:Body>
     <univ:AirCancelReq
-      AuthorizedBy="mastermind" TargetBranch="{{TargetBranch}}"
+      AuthorizedBy="user" TargetBranch="{{TargetBranch}}"
       RetrieveProviderReservationDetails="false" Version="{{version}}"
       >
       <com:BillingPointOfSaleInfo OriginApplication="uAPI" />

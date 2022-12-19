@@ -6,7 +6,7 @@ module.exports = `
     <soap:Header/>
     <soap:Body>
         <air:AirPriceReq
-            AuthorizedBy="mastermind" CheckFlightDetails="true" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" CheckFlightDetails="true" TargetBranch="{{TargetBranch}}"
             TraceId="mastermind"
             {{#if fetchFareRules}}
             FareRuleType="{{#if long}}long{{else}}short{{/if}}"
@@ -38,7 +38,7 @@ module.exports = `
                 {{/segments}}
             </air:AirItinerary>
             {{#if business}}
-            <air:AirPricingModifiers PlatingCarrier="{{platingCarrier}}" InventoryRequestType="DirectAccess">
+            <air:AirPricingModifiers FaresIndicator = "PublicFaresOnly" PlatingCarrier="{{platingCarrier}}" InventoryRequestType="DirectAccess">
                 <air:PermittedCabins>
                     <com:CabinClass Type="Business" xmlns:com="http://www.travelport.com/schema/common_v47_0" />
                 </air:PermittedCabins>
@@ -47,11 +47,15 @@ module.exports = `
             <air:AirPricingModifiers PlatingCarrier="{{platingCarrier}}" InventoryRequestType="DirectAccess"/>
             {{/if}}
             {{#passengers}}
-            <com:SearchPassenger Key="P_{{@index}}" Code="{{ageCategory}}" {{#if child}}Age="9"{{else if Age}}Age="{{Age}}"{{/if}} xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+            <com:SearchPassenger 
+                Key="P_{{@index}}" 
+                Code="{{ageCategory}}" 
+                {{#if child}}Age="9"{{else if Age}}Age="{{Age}}"{{/if}} 
+                xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
             {{/passengers}}
             <air:AirPricingCommand>
                 {{#segments}}
-                <air:AirSegmentPricingModifiers AirSegmentRef="{{@index}}"{{#if fareBasisCode}} FareBasisCode="{{fareBasisCode}}"{{/if}}>
+                <air:AirSegmentPricingModifiers AirSegmentRef="{{@index}}">
                 {{#if bookingClass}}
                     <air:PermittedBookingCodes>
                             <air:BookingCode Code="{{bookingClass}}" />

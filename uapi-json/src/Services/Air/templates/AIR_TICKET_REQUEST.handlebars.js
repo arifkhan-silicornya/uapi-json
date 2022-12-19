@@ -3,7 +3,7 @@ module.exports = `
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
   <soap:Header/>
   <soap:Body>
-    <air:AirTicketingReq AuthorizedBy="mastermind" ReturnInfoOnFail="true" TargetBranch="{{TargetBranch}}"
+    <air:AirTicketingReq AuthorizedBy="user" ReturnInfoOnFail="true" TargetBranch="{{TargetBranch}}"
       xmlns:air="http://www.travelport.com/schema/air_v47_0"
       xmlns:com="http://www.travelport.com/schema/common_v47_0"
       >

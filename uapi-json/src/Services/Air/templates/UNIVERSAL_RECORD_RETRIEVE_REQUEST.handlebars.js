@@ -9,7 +9,7 @@ Air Universal Record Retrieve For Galileo(1G) LFS Request
   <soapenv:Body>
     <univ:UniversalRecordRetrieveReq
       ViewOnlyInd="{{viewOnly}}"
-      AuthorizedBy="mastermind"
+      AuthorizedBy="user"
       TraceId="mastermind"
       TargetBranch="{{TargetBranch}}"
     >

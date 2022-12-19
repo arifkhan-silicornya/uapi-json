@@ -7,7 +7,7 @@ module.exports = `
   <soapenv:Header/>
   <soapenv:Body>
     <air:AirVoidDocumentReq
-      AuthorizedBy="mastermind" TargetBranch="{{TargetBranch}}" RetrieveProviderReservationDetails="false"
+      AuthorizedBy="user" TargetBranch="{{TargetBranch}}" RetrieveProviderReservationDetails="false"
       ShowETR="false" ProviderCode="{{provider}}" ProviderLocatorCode="{{pnr}}"
       >
       <com:BillingPointOfSaleInfo OriginApplication="uAPI"/>

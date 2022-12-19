@@ -7,7 +7,7 @@ module.exports = `
   <soap:Header/>
   <soap:Body>
     <air:AirRetrieveDocumentReq
-            AuthorizedBy="mastermind"
+            AuthorizedBy="user"
             TargetBranch="{{TargetBranch}}"
             RetrieveProviderReservationDetails="true"
             ReturnRestrictions="true"

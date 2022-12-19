@@ -4,7 +4,7 @@ module.exports = `
         <air:AirExchangeReq
                 xmlns:air="http://www.travelport.com/schema/air_v47_0"
                 xmlns:common_v47_0="http://www.travelport.com/schema/common_v47_0"
-                AuthorizedBy="mastermind"
+                AuthorizedBy="user"
                 ReturnReservation="false"
                 TargetBranch="{{TargetBranch}}"
         >
