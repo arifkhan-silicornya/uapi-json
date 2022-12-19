@@ -6,7 +6,7 @@ module.exports = `
   <soap:Header/>
   <soap:Body>
     <univ:UniversalRecordImportReq
-      AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
+      AuthorizedBy="user" TraceId="{{requestId}}" TargetBranch="{{TargetBranch}}"
       ProviderCode="{{provider}}" ProviderLocatorCode="{{pnr}}"
       xmlns:univ="http://www.travelport.com/schema/universal_v47_0"
       xmlns:com="http://www.travelport.com/schema/common_v47_0"

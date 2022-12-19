@@ -1,4 +1,0 @@
-<UniversalRecordRetrieveReq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TraceId="07f3360f-b597-440c-8a99-6337cb6f0d94" TargetBranch="123456">
-  <BillingPointOfSaleInfo OriginApplication="UAPI" xmlns="http://www.travelport.com/schema/common_v50_0" />
-  <UniversalRecordLocatorCode xmlns="http://www.travelport.com/schema/universal_v50_0">1APO1R</UniversalRecordLocatorCode>
-</UniversalRecordRetrieveReq>

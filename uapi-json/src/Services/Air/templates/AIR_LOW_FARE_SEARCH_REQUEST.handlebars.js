@@ -6,14 +6,14 @@ module.exports = `
     <soap:Body>
         {{#if async}}
         <air:LowFareSearchAsynchReq
-            AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="{{requestId}}" TargetBranch="{{TargetBranch}}"
             ReturnUpsellFare="true"
             xmlns:air="http://www.travelport.com/schema/air_v47_0"
             xmlns:com="http://www.travelport.com/schema/common_v47_0"
             >
         {{else}}
         <air:LowFareSearchReq
-            AuthorizedBy="user" TraceId="mastermind" TargetBranch="{{TargetBranch}}"
+            AuthorizedBy="user" TraceId="{{requestId}}" TargetBranch="{{TargetBranch}}"
             ReturnUpsellFare="true"
             {{#if solutionResult}}
             SolutionResult="true"
@@ -102,17 +102,10 @@ module.exports = `
                 {{/if}}
             </air:AirSearchModifiers>
             {{#passengers}}
-            <com:SearchPassenger 
-                BookingTravelerRef="mastermind_{{UUniqueID}}" 
-                Code="{{ageCategory}}"
-                {{#if child}} Age="9"{{/if}} 
-                {{#if infantWOS}} Age="0"{{/if}} 
-                {{#if infantWS}} Age="1"{{/if}} 
-                xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+            <com:SearchPassenger Code="{{ageCategory}}"{{#if child}} Age="9"{{/if}} xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
             {{/passengers}}
             {{#if pricing}}
             <air:AirPricingModifiers
-                FaresIndicator = "PublicFaresOnly"
                 {{#if pricing.currency}}
                 CurrencyType="{{pricing.currency}}"
                 {{/if}}

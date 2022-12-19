@@ -10,7 +10,7 @@ Air Universal Record Retrieve For Galileo(1G) LFS Request
     <univ:UniversalRecordRetrieveReq
       ViewOnlyInd="{{viewOnly}}"
       AuthorizedBy="user"
-      TraceId="mastermind"
+      TraceId="{{requestId}}"
       TargetBranch="{{TargetBranch}}"
     >
     <com:BillingPointOfSaleInfo OriginApplication="UAPI"/>
