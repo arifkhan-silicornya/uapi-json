@@ -41,7 +41,7 @@ module.exports = `
                 {{/segments}}
             </air:AirItinerary>
             {{#if business}}
-            <air:AirPricingModifiers FaresIndicator = "PublicFaresOnly" PlatingCarrier="{{platingCarrier}}" InventoryRequestType="DirectAccess">
+            <air:AirPricingModifiers FaresIndicator="PublicFaresOnly" PlatingCarrier="{{platingCarrier}}" InventoryRequestType="DirectAccess">
                 <air:PermittedCabins>
                     <com:CabinClass Type="Business" xmlns:com="http://www.travelport.com/schema/common_v47_0" />
                 </air:PermittedCabins>

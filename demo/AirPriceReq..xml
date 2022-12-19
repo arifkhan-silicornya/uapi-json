@@ -1,0 +1,47 @@
+<AirPriceReq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TraceId="07f3360f-b597-440c-8a99-6337cb6f0d94" TargetBranch="123456" FareRuleType="long">
+  <BillingPointOfSaleInfo OriginApplication="UAPI" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <AirItinerary xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirSegment Key="wpUmDESqWDKAdDPHBAAAAA==" AvailabilitySource="S" Equipment="77W" OptionalServicesIndicator="false" ETicketability="Yes" LinkAvailability="true" AvailabilityDisplayType="Fare Shop/Optimal Shop" Group="0" Carrier="EK" FlightNumber="587" Origin="DAC" Destination="DXB" DepartureTime="2022-06-27T19:30:00.000+06:00" ArrivalTime="2022-06-27T22:30:00.000+04:00" FlightTime="300" Distance="2207" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="Polled avail used">
+      <AirAvailInfo ProviderCode="1G" />
+      <Connection SegmentIndex="0" />
+    </AirSegment>
+    <AirSegment Key="wpUmDESqWDKAfDPHBAAAAA==" AvailabilitySource="S" Equipment="388" OptionalServicesIndicator="false" ETicketability="Yes" LinkAvailability="true" AvailabilityDisplayType="Fare Shop/Optimal Shop" Group="0" Carrier="EK" FlightNumber="7" Origin="DXB" Destination="LHR" DepartureTime="2022-06-28T02:30:00.000+04:00" ArrivalTime="2022-06-28T07:05:00.000+01:00" FlightTime="455" Distance="3403" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="Polled avail used">
+      <AirAvailInfo ProviderCode="1G" />
+    </AirSegment>
+    <AirSegment Key="wpUmDESqWDKAhDPHBAAAAA==" AvailabilitySource="S" Equipment="388" OptionalServicesIndicator="false" ETicketability="Yes" LinkAvailability="true" AvailabilityDisplayType="Fare Shop/Optimal Shop" Group="1" Carrier="EK" FlightNumber="2" Origin="LHR" Destination="DXB" DepartureTime="2022-06-30T14:20:00.000+01:00" ArrivalTime="2022-07-01T00:20:00.000+04:00" FlightTime="420" Distance="3403" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="Polled avail used">
+      <AirAvailInfo ProviderCode="1G" />
+      <Connection SegmentIndex="2" />
+    </AirSegment>
+    <AirSegment Key="wpUmDESqWDKAjDPHBAAAAA==" AvailabilitySource="S" Equipment="77W" OptionalServicesIndicator="false" ETicketability="Yes" LinkAvailability="true" AvailabilityDisplayType="Fare Shop/Optimal Shop" Group="1" Carrier="EK" FlightNumber="582" Origin="DXB" Destination="DAC" DepartureTime="2022-07-01T02:00:00.000+04:00" ArrivalTime="2022-07-01T08:40:00.000+06:00" FlightTime="280" Distance="2207" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="Polled avail used">
+      <AirAvailInfo ProviderCode="1G" />
+    </AirSegment>
+  </AirItinerary>
+  <AirPricingModifiers ReturnFailedSegments="true" PlatingCarrier="EK" InventoryRequestType="DirectAccess" FaresIndicator="PublicAndPrivateFares" xmlns="http://www.travelport.com/schema/air_v50_0">
+    <ExemptTaxes />
+  </AirPricingModifiers>
+  <SearchPassenger Code="ADT" BookingTravelerRef="11" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <SearchPassenger Code="CNN" Age="6" BookingTravelerRef="21" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <SearchPassenger Code="INF" Age="1" BookingTravelerRef="31" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <AirPricingCommand xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirSegmentPricingModifiers AirSegmentRef="wpUmDESqWDKAdDPHBAAAAA==">
+      <PermittedBookingCodes>
+        <BookingCode Code="K" />
+      </PermittedBookingCodes>
+    </AirSegmentPricingModifiers>
+    <AirSegmentPricingModifiers AirSegmentRef="wpUmDESqWDKAfDPHBAAAAA==">
+      <PermittedBookingCodes>
+        <BookingCode Code="K" />
+      </PermittedBookingCodes>
+    </AirSegmentPricingModifiers>
+    <AirSegmentPricingModifiers AirSegmentRef="wpUmDESqWDKAhDPHBAAAAA==">
+      <PermittedBookingCodes>
+        <BookingCode Code="K" />
+      </PermittedBookingCodes>
+    </AirSegmentPricingModifiers>
+    <AirSegmentPricingModifiers AirSegmentRef="wpUmDESqWDKAjDPHBAAAAA==">
+      <PermittedBookingCodes>
+        <BookingCode Code="K" />
+      </PermittedBookingCodes>
+    </AirSegmentPricingModifiers>
+  </AirPricingCommand>
+</AirPriceReq>

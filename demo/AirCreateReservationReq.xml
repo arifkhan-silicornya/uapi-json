@@ -1,0 +1,501 @@
+<AirCreateReservationReq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TraceId="07f3360f-b597-440c-8a99-6337cb6f0d94" TargetBranch="123456" RuleName="COMM" RetainReservation="Both" RestrictWaitlist="true">
+  <BillingPointOfSaleInfo OriginApplication="UAPI" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <BookingTraveler Key="115" TravelerType="ADT" Gender="M" Nationality="BD" xmlns="http://www.travelport.com/schema/common_v50_0">
+    <BookingTravelerName Prefix="MR " First="XXXXXXXXX " Last="YYYYYYYY" />
+    <DeliveryInfo>
+      <ShippingAddress>
+        <AddressName>Home</AddressName>
+        <Street>Company Park Height, Dhanmondi-1, Dhaka</Street>
+        <City>DHAKA</City>
+        <State>DHAKA</State>
+        <PostalCode>1215</PostalCode>
+        <Country>BD</Country>
+      </ShippingAddress>
+    </DeliveryInfo>
+    <Email Type="Home" EmailID="abcd@gmail.com" />
+    <SSR Type="DOCS" Status="HK" FreeText="P/BD/090561W1/BD/08APR87/M/02AUG26/YYYYYYYY/XXXXXXXXX " Carrier="EK" />
+    <SSR Type="PCTC" FreeText="MR  XXXXXXXXX YYYYYYYY/DAC TEL 01922358358" Carrier="EK" />
+    <SSR Type="CTCM" Status="HK" FreeText="01922358358" Carrier="EK" />
+    <SSR Type="CTCE" Status="HK" FreeText="abcd@gmail.com" Carrier="EK" />
+  </BookingTraveler>
+  <BookingTraveler Key="118" TravelerType="CNN" Age="7" Gender="M" Nationality="BD" xmlns="http://www.travelport.com/schema/common_v50_0">
+    <BookingTravelerName Prefix="MSTR" First="ZZZZZZ " Last="YYYYYYYY" />
+    <SSR Type="DOCS" Status="HK" FreeText="P/BD/0905SD12361W1/BD/08APR15/M/02AUG26/YYYYYYYY/ZZZZZZ " Carrier="EK" />
+    <SSR Type="PCTC" FreeText="MSTR  ZZZZZZ YYYYYYYY/DAC TEL 01912238358" Carrier="EK" />
+    <SSR Type="CTCM" Status="HK" FreeText="01912238358" Carrier="EK" />
+    <SSR Type="CTCE" Status="HK" FreeText="abcd@gmail.com" Carrier="EK" />
+    <NameRemark Category="AIR">
+      <RemarkData>P-C07 DOB08Apr15</RemarkData>
+    </NameRemark>
+  </BookingTraveler>
+  <BookingTraveler Key="116" TravelerType="INF" Gender="M" Nationality="BD" xmlns="http://www.travelport.com/schema/common_v50_0">
+    <BookingTravelerName Prefix="MSTR" First="NAJIB " Last="YYYYYYYY" />
+    <SSR Type="DOCS" Status="HK" FreeText="P/BD/090561341W1/BD/08DEC21/MI/02AUG26/YYYYYYYY/ZZZZZZZ " Carrier="EK" />
+    <SSR Type="PCTC" FreeText="MSTR  NAJIB YYYYYYYY/DAC TEL 01924658358" Carrier="EK" />
+    <SSR Type="CTCM" Status="HK" FreeText="01924658358" Carrier="EK" />
+    <SSR Type="CTCE" Status="HK" FreeText="abcd@gmail.com" Carrier="EK" />
+    <NameRemark Category="AIR">
+      <RemarkData>08Dec21</RemarkData>
+    </NameRemark>
+  </BookingTraveler>
+  <OSI Carrier="EK" Text="PAX CTCM/234567890" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <OSI Carrier="EK" Text=" PAX CTCE/abcd@gmail.com" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <ContinuityCheckOverride Key="1T" xmlns="http://www.travelport.com/schema/common_v50_0">true</ContinuityCheckOverride>
+  <AgencyContactInfo xmlns="http://www.travelport.com/schema/common_v50_0">
+    <PhoneNumber Location="DAC" Number="234567890" Text="Big Company 234567890 Big Company" />
+  </AgencyContactInfo>
+  <FormOfPayment AgentText="INVAGT*Big Company" Type="Cash" Key="jwt2mcK1Qp27I2xfpcCtAw==" IsAgentType="true" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <AirPricingSolution Key="MCRmDEUqWDKAHkfLBAAAAA==" TotalPrice="BDT203890" BasePrice="USD1799.00" ApproximateTotalPrice="BDT203890" ApproximateBasePrice="BDT152915" EquivalentBasePrice="BDT152915" Taxes="BDT50975" Fees="BDT0" ApproximateTaxes="BDT50975" xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirSegment Key="MCRmDEUqWDKA/jfLBAAAAA==" AvailabilitySource="S" Equipment="77W" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked" Group="0" Carrier="EK" FlightNumber="587" Origin="DAC" Destination="DXB" DepartureTime="2022-06-27T19:30:00.000+06:00" ArrivalTime="2022-06-27T22:30:00.000+04:00" FlightTime="300" TravelTime="300" Distance="2207" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="O and D cache or polled status used with different local status" ClassOfService="K">
+      <CodeshareInfo OperatingCarrier="EK">Emirates</CodeshareInfo>
+      <AirAvailInfo ProviderCode="1G" />
+      <FlightDetails Distance="2207" TravelTime="300" FlightTime="300" ArrivalTime="2022-06-27T22:30:00.000+04:00" DepartureTime="2022-06-27T19:30:00.000+06:00" Destination="DXB" Origin="DAC" Key="MCRmDEUqWDKAAkfLBAAAAA==" />
+      <Connection SegmentIndex="0" />
+    </AirSegment>
+    <AirSegment Key="MCRmDEUqWDKABkfLBAAAAA==" AvailabilitySource="S" Equipment="388" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked" Group="0" Carrier="EK" FlightNumber="7" Origin="DXB" Destination="LHR" DepartureTime="2022-06-28T02:30:00.000+04:00" ArrivalTime="2022-06-28T07:05:00.000+01:00" FlightTime="455" TravelTime="455" Distance="3403" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="O and D cache or polled status used with different local status" ClassOfService="K">
+      <CodeshareInfo OperatingCarrier="EK">Emirates</CodeshareInfo>
+      <AirAvailInfo ProviderCode="1G" />
+      <FlightDetails Distance="3403" TravelTime="455" FlightTime="455" ArrivalTime="2022-06-28T07:05:00.000+01:00" DepartureTime="2022-06-28T02:30:00.000+04:00" Destination="LHR" Origin="DXB" Key="MCRmDEUqWDKACkfLBAAAAA==" />
+    </AirSegment>
+    <AirSegment Key="MCRmDEUqWDKADkfLBAAAAA==" AvailabilitySource="S" Equipment="388" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked" Group="1" Carrier="EK" FlightNumber="2" Origin="LHR" Destination="DXB" DepartureTime="2022-06-30T14:20:00.000+01:00" ArrivalTime="2022-07-01T00:20:00.000+04:00" FlightTime="420" TravelTime="420" Distance="3403" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="O and D cache or polled status used with different local status" ClassOfService="K">
+      <CodeshareInfo OperatingCarrier="EK">Emirates</CodeshareInfo>
+      <AirAvailInfo ProviderCode="1G" />
+      <FlightDetails Distance="3403" TravelTime="420" FlightTime="420" ArrivalTime="2022-07-01T00:20:00.000+04:00" DepartureTime="2022-06-30T14:20:00.000+01:00" Destination="DXB" Origin="LHR" Key="MCRmDEUqWDKAEkfLBAAAAA==" />
+      <Connection SegmentIndex="2" />
+    </AirSegment>
+    <AirSegment Key="MCRmDEUqWDKAFkfLBAAAAA==" AvailabilitySource="S" Equipment="77W" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked" Group="1" Carrier="EK" FlightNumber="582" Origin="DXB" Destination="DAC" DepartureTime="2022-07-01T02:00:00.000+04:00" ArrivalTime="2022-07-01T08:40:00.000+06:00" FlightTime="280" TravelTime="280" Distance="2207" ProviderCode="1G" ParticipantLevel="Secure Sell" PolledAvailabilityOption="O and D cache or polled status used with different local status" ClassOfService="K">
+      <CodeshareInfo OperatingCarrier="EK">Emirates</CodeshareInfo>
+      <AirAvailInfo ProviderCode="1G" />
+      <FlightDetails Distance="2207" TravelTime="280" FlightTime="280" ArrivalTime="2022-07-01T08:40:00.000+06:00" DepartureTime="2022-07-01T02:00:00.000+04:00" Destination="DAC" Origin="DXB" Key="MCRmDEUqWDKAGkfLBAAAAA==" />
+    </AirSegment>
+    <AirPricingInfo AirPricingInfoGroup="1" LatestTicketingTime="2022-06-06T23:59:00.000+06:00" PricingMethod="Guaranteed" PlatingCarrier="EK" BasePrice="USD971.00" Key="MCRmDEUqWDKAOkfLBAAAAA==" TotalPrice="BDT109611" ApproximateTotalPrice="BDT109611" ApproximateBasePrice="BDT82535" EquivalentBasePrice="BDT82535" Taxes="BDT27076" ApproximateTaxes="BDT27076" ProviderCode="1G">
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT41361" Destination="LHR" Origin="DAC" PassengerTypeCode="ADT" FareBasis="KEXESBD1" Key="MCRmDEUqWDKAZkfLBAAAAA==" TaxAmount="BDT10292.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKAZkfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2ybSmSH0JqCzEiEd4Hbf3FaHnAyGqh8JIaqGt3c2MyedmtEalkT/ccvDAJfjl6L5xXker/bRGkSYBeVvL0gTWvGVKnsahilB5/WJLKVanbw7tLidxzoH4hHbmnSPrp27jtp4B1xjSbRrjKTicpvYbmY4Wr6XufjmxNIZNECwmXZqVGir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJuedM5Dut5bDA6k3aPuZSNe5f5u0G60EiMiuywXvCVMo=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKAZkfLBAAAAA==" />
+      </FareInfo>
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT41174" Destination="DAC" Origin="LHR" PassengerTypeCode="ADT" FareBasis="KEXESBD1" Key="MCRmDEUqWDKAukfLBAAAAA==" TaxAmount="BDT16784.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKAukfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2yba1sMfaKOuQYDNqyIG/vnOnAyGqh8JIaqGt3c2MyedmtEalkT/ccvDA1818xss/Xd+r/bRGkSYBeVvL0gTWvGVKnsahilB5/WJLKVanbw7tLidxzoH4hHbmnSPrp27jtpzyy/Q52QOiITicpvYbmY4WEl93qi3+DNQ90ZgVbs8PGir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJuedM5Dut5bDA6k3aPuZSNe5f5u0G60EiMiuywXvCVMo=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKAukfLBAAAAA==" />
+      </FareInfo>
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAZkfLBAAAAA==" SegmentRef="MCRmDEUqWDKA/jfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAIkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAZkfLBAAAAA==" SegmentRef="MCRmDEUqWDKABkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAIkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAukfLBAAAAA==" SegmentRef="MCRmDEUqWDKADkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAJkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAukfLBAAAAA==" SegmentRef="MCRmDEUqWDKAFkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAJkfLBAAAAA==" />
+      <TaxInfo Amount="BDT500" Category="BD" Key="MCRmDEUqWDKAPkfLBAAAAA==" />
+      <TaxInfo Amount="BDT3000" Category="OW" Key="MCRmDEUqWDKAQkfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P7" Key="MCRmDEUqWDKARkfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P8" Key="MCRmDEUqWDKASkfLBAAAAA==" />
+      <TaxInfo Amount="BDT4000" Category="UT" Key="MCRmDEUqWDKATkfLBAAAAA==" />
+      <TaxInfo Amount="BDT1620" Category="F6" Key="MCRmDEUqWDKAUkfLBAAAAA==" />
+      <TaxInfo Amount="BDT232" Category="ZR" Key="MCRmDEUqWDKAVkfLBAAAAA==" />
+      <TaxInfo Amount="BDT9413" Category="GB" Key="MCRmDEUqWDKAWkfLBAAAAA==" />
+      <TaxInfo Amount="BDT6281" Category="UB" Key="MCRmDEUqWDKAXkfLBAAAAA==" />
+      <TaxInfo Amount="BDT330" Category="E5" Key="MCRmDEUqWDKAYkfLBAAAAA==" />
+      <FareCalc>DAC EK X/DXB EK LON 484.00KEXESBD1 EK X/DXB EK DAC 484.00KEXESBD1 Q DACDAC2.60NUC970.60END ROE1.0</FareCalc>
+      <PassengerType Code="ADT" BookingTravelerRef="115" />
+      <ChangePenalty PenaltyApplies="Anytime">
+        <Percentage>0.00</Percentage>
+      </ChangePenalty>
+      <CancelPenalty PenaltyApplies="Anytime">
+        <Amount>BDT6800.0</Amount>
+      </CancelPenalty>
+      <AirPricingModifiers ReturnFailedSegments="true" PlatingCarrier="EK" FaresIndicator="PublicAndPrivateFares">
+        <ExemptTaxes />
+      </AirPricingModifiers>
+      <BaggageAllowances>
+        <BaggageAllowanceInfo Origin="DAC" Destination="LHR" Carrier="EK" TravelerType="ADT">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>30K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <BaggageAllowanceInfo Origin="LHR" Destination="DAC" Carrier="EK" TravelerType="ADT">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>30K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DAC" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="LHR" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="LHR" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="DAC" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+      </BaggageAllowances>
+    </AirPricingInfo>
+    <AirPricingInfo AirPricingInfoGroup="2" LatestTicketingTime="2022-06-06T23:59:00.000+06:00" PricingMethod="Guaranteed" PlatingCarrier="EK" BasePrice="USD729.00" Key="MCRmDEUqWDKAHlfLBAAAAA==" TotalPrice="BDT77628" ApproximateTotalPrice="BDT77628" ApproximateBasePrice="BDT61965" EquivalentBasePrice="BDT61965" Taxes="BDT15663" ApproximateTaxes="BDT15663" ProviderCode="1G">
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT31076" Destination="LHR" Origin="DAC" PassengerTypeCode="CNN" FareBasis="KEXESBD1" Key="MCRmDEUqWDKARlfLBAAAAA==" TaxAmount="BDT8292.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKARlfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2ybfQ3/1mPATSVUzHZmXFN2V/AyGqh8JIaqGt3c2MyedmtEalkT/ccvDAJfjl6L5xXker/bRGkSYBeVvL0gTWvGVIHyACgdSlRrJLKVanbw7tLidxzoH4hHbmnSPrp27jtp4B1xjSbRrjKTicpvYbmY4Wr6XufjmxNIUpu3yBQqNoGir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJV2Fthr9vlXjA6k3aPuZSNe5f5u0G60EiMiuywXvCVMo=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKARlfLBAAAAA==" />
+      </FareInfo>
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT30889" Destination="DAC" Origin="LHR" PassengerTypeCode="CNN" FareBasis="KEXESBD1" Key="MCRmDEUqWDKAmlfLBAAAAA==" TaxAmount="BDT7371.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKAmlfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2ybXwoNKEjC8vwWB7uBPP1sJXAyGqh8JIaqGt3c2MyedmtEalkT/ccvDA1818xss/Xd+r/bRGkSYBeVvL0gTWvGVIHyACgdSlRrJLKVanbw7tLidxzoH4hHbmnSPrp27jtpzyy/Q52QOiITicpvYbmY4WEl93qi3+DNeJ3dJwsXGSOir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJV2Fthr9vlXjA6k3aPuZSNe5f5u0G60EiMiuywXvCVMo=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKAmlfLBAAAAA==" />
+      </FareInfo>
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKARlfLBAAAAA==" SegmentRef="MCRmDEUqWDKA/jfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAKkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKARlfLBAAAAA==" SegmentRef="MCRmDEUqWDKABkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAKkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAmlfLBAAAAA==" SegmentRef="MCRmDEUqWDKADkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKALkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAmlfLBAAAAA==" SegmentRef="MCRmDEUqWDKAFkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKALkfLBAAAAA==" />
+      <TaxInfo Amount="BDT500" Category="BD" Key="MCRmDEUqWDKAIlfLBAAAAA==" />
+      <TaxInfo Amount="BDT3000" Category="OW" Key="MCRmDEUqWDKAJlfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P7" Key="MCRmDEUqWDKAKlfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P8" Key="MCRmDEUqWDKALlfLBAAAAA==" />
+      <TaxInfo Amount="BDT2000" Category="UT" Key="MCRmDEUqWDKAMlfLBAAAAA==" />
+      <TaxInfo Amount="BDT1620" Category="F6" Key="MCRmDEUqWDKANlfLBAAAAA==" />
+      <TaxInfo Amount="BDT232" Category="ZR" Key="MCRmDEUqWDKAOlfLBAAAAA==" />
+      <TaxInfo Amount="BDT6281" Category="UB" Key="MCRmDEUqWDKAPlfLBAAAAA==" />
+      <TaxInfo Amount="BDT330" Category="E5" Key="MCRmDEUqWDKAQlfLBAAAAA==" />
+      <FareCalc>DAC EK X/DXB EK LON 363.00KEXESBD1CH EK X/DXB EK DAC 363.00KEXESBD1CH Q DACDAC2.60NUC728.60END ROE1.0</FareCalc>
+      <PassengerType Code="CNN" Age="7" BookingTravelerRef="118" />
+      <ChangePenalty PenaltyApplies="Anytime">
+        <Percentage>0.00</Percentage>
+      </ChangePenalty>
+      <CancelPenalty PenaltyApplies="Anytime">
+        <Amount>BDT6800.0</Amount>
+      </CancelPenalty>
+      <AirPricingModifiers ReturnFailedSegments="true" PlatingCarrier="EK" FaresIndicator="PublicAndPrivateFares">
+        <ExemptTaxes />
+      </AirPricingModifiers>
+      <BaggageAllowances>
+        <BaggageAllowanceInfo Origin="DAC" Destination="LHR" Carrier="EK" TravelerType="CNN">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>30K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <BaggageAllowanceInfo Origin="LHR" Destination="DAC" Carrier="EK" TravelerType="CNN">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>30K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DAC" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="LHR" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="LHR" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="DAC" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO15LB/7KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+      </BaggageAllowances>
+    </AirPricingInfo>
+    <AirPricingInfo AirPricingInfoGroup="3" LatestTicketingTime="2022-06-06T23:59:00.000+06:00" PricingMethod="Guaranteed" PlatingCarrier="EK" BasePrice="USD99.00" Key="MCRmDEUqWDKA/lfLBAAAAA==" TotalPrice="BDT16651" ApproximateTotalPrice="BDT16651" ApproximateBasePrice="BDT8415" EquivalentBasePrice="BDT8415" Taxes="BDT8236" ApproximateTaxes="BDT8236" ProviderCode="1G">
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT4335" Destination="LHR" Origin="DAC" PassengerTypeCode="INF" FareBasis="KEXESBD1" Key="MCRmDEUqWDKAEmfLBAAAAA==" TaxAmount="BDT1831.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKAEmfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2ybSmSH0JqCzEiT0pgkxVwCHNN3J3NyYpz6QwSaIJDOfFcGTE80Tl1teRfKTP2atWucWLgFn3B9sPdSU8gecfbWEljEmMG+NRoPpmRVmgyUnTzTpTvClptyNxIjfJHYVxkk0PFc7ZmQhP+mpBH9wehGMHKU92ACEHlpOpP2mrWih///AFKEXb03hK/he9va7VDH7+F729rtUMfv4Xvb2u1Qx+/he9va7VDHxDGJun84l6GmjYuszn207WOnxkQ2WPPHvaVUAnec78/lBnWqBrHwZy63DXJtIoQntwXtO9a1rEPhC/1HCv3eWA=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKAEmfLBAAAAA==" />
+      </FareInfo>
+      <FareInfo EffectiveDate="2022-05-30T11:43:00.000+06:00" Amount="BDT4080" Destination="DAC" Origin="LHR" PassengerTypeCode="INF" FareBasis="KEXESBD1" Key="MCRmDEUqWDKAZmfLBAAAAA==" TaxAmount="BDT6405.00">
+        <FareRuleKey FareInfoRef="MCRmDEUqWDKAZmfLBAAAAA==" ProviderCode="1G">6UUVoSldxwjF4apXl16y/MbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovAxsq9Xrmw+DmxWa1uaqI55k3aSkvhp2yba1sMfaKOuQYEXEAafZI6WBN3J3NyYpz6QwSaIJDOfFcGTE80Tl1teQLPJmXjTXGV2LgFn3B9sPdSU8gecfbWEljEmMG+NRoPpmRVmgyUnTzTpTvClptyNxIjfJHYVxkk04nKb2G5mOFmpBH9wehGMF+3OqzlbBMOgb4ehvEUxkM/AFKEXb03hK/he9va7VDH7+F729rtUMfv4Xvb2u1Qx+/he9va7VDHxDGJun84l6GmjYuszn207WOnxkQ2WPPHvaVUAnec78/lBnWqBrHwZy63DXJtIoQntwXtO9a1rEPhC/1HCv3eWA=</FareRuleKey>
+        <Brand Key="MCRmDEUqWDKAZmfLBAAAAA==" />
+      </FareInfo>
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAEmfLBAAAAA==" SegmentRef="MCRmDEUqWDKA/jfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAMkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAEmfLBAAAAA==" SegmentRef="MCRmDEUqWDKABkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKAMkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAZmfLBAAAAA==" SegmentRef="MCRmDEUqWDKADkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKANkfLBAAAAA==" />
+      <BookingInfo BookingCode="K" CabinClass="Economy" FareInfoRef="MCRmDEUqWDKAZmfLBAAAAA==" SegmentRef="MCRmDEUqWDKAFkfLBAAAAA==" HostTokenRef="MCRmDEUqWDKANkfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P7" Key="MCRmDEUqWDKAAmfLBAAAAA==" />
+      <TaxInfo Amount="BDT850" Category="P8" Key="MCRmDEUqWDKABmfLBAAAAA==" />
+      <TaxInfo Amount="BDT6281" Category="UB" Key="MCRmDEUqWDKACmfLBAAAAA==" />
+      <TaxInfo Amount="BDT255" Category="E5" Key="MCRmDEUqWDKADmfLBAAAAA==" />
+      <FareCalc>DAC EK X/DXB EK LON 48.40KEXESBD1IN EK X/DXB EK DAC 48.40KEXESBD1IN Q DACDAC2.60NUC99.40END ROE1.0</FareCalc>
+      <PassengerType Code="INF" Age="1" BookingTravelerRef="116" />
+      <ChangePenalty PenaltyApplies="Anytime">
+        <Percentage>0.00</Percentage>
+      </ChangePenalty>
+      <CancelPenalty PenaltyApplies="Anytime">
+        <Amount>BDT6800.0</Amount>
+      </CancelPenalty>
+      <AirPricingModifiers ReturnFailedSegments="true" PlatingCarrier="EK" FaresIndicator="PublicAndPrivateFares">
+        <ExemptTaxes />
+      </AirPricingModifiers>
+      <BaggageAllowances>
+        <BaggageAllowanceInfo Origin="DAC" Destination="LHR" Carrier="EK" TravelerType="INF">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>10K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <BaggageAllowanceInfo Origin="LHR" Destination="DAC" Carrier="EK" TravelerType="INF">
+          <URLInfo>
+            <URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/EK</URL>
+          </URLInfo>
+          <TextInfo>
+            <Text>10K</Text>
+            <Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</Text>
+          </TextInfo>
+          <BagDetails ApplicableBags="1stChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+          <BagDetails ApplicableBags="2ndChecked">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </BagDetails>
+        </BaggageAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DAC" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO11LB/5KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="LHR" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO11LB/5KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="LHR" Destination="DXB" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO11LB/5KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+        <CarryOnAllowanceInfo Origin="DXB" Destination="DAC" Carrier="EK">
+          <TextInfo>
+            <Text>1P</Text>
+          </TextInfo>
+          <CarryOnDetails ApplicableCarryOnBags="1">
+            <BaggageRestriction>
+              <TextInfo>
+                <Text>UPTO11LB/5KG AND UPTO45LI/115LCM</Text>
+              </TextInfo>
+            </BaggageRestriction>
+          </CarryOnDetails>
+        </CarryOnAllowanceInfo>
+      </BaggageAllowances>
+    </AirPricingInfo>
+    <FareNote Key="MCRmDEUqWDKAymfLBAAAAA==">SUM IDENTIFIED AS UB IS A PASSENGER SERVICE CHARGE</FareNote>
+    <FareNote Key="MCRmDEUqWDKAzmfLBAAAAA==">RATE USED IN EQU TOTAL IS BSR 1USD - 85BDT</FareNote>
+    <FareNote Key="MCRmDEUqWDKA0mfLBAAAAA==">LAST DATE TO PURCHASE TICKET: 06JUN22 DAC</FareNote>
+    <FareNote Key="MCRmDEUqWDKA1mfLBAAAAA==">FARE HAS A PLATING CARRIER RESTRICTION</FareNote>
+    <FareNote Key="MCRmDEUqWDKA2mfLBAAAAA==">E-TKT REQUIRED</FareNote>
+    <FareNote Key="MCRmDEUqWDKA3mfLBAAAAA==">TICKETING FEES MAY APPLY</FareNote>
+    <FareNote Key="MCRmDEUqWDKA4mfLBAAAAA==">SUM IDENTIFIED AS UB IS A PASSENGER SERVICE CHARGE</FareNote>
+    <FareNote Key="MCRmDEUqWDKA5mfLBAAAAA==">RATE USED IN EQU TOTAL IS BSR 1USD - 85BDT</FareNote>
+    <FareNote Key="MCRmDEUqWDKA6mfLBAAAAA==">LAST DATE TO PURCHASE TICKET: 06JUN22 DAC</FareNote>
+    <FareNote Key="MCRmDEUqWDKA7mfLBAAAAA==">FARE HAS A PLATING CARRIER RESTRICTION</FareNote>
+    <FareNote Key="MCRmDEUqWDKA8mfLBAAAAA==">E-TKT REQUIRED</FareNote>
+    <FareNote Key="MCRmDEUqWDKA9mfLBAAAAA==">TICKETING FEES MAY APPLY</FareNote>
+    <FareNote Key="MCRmDEUqWDKA+mfLBAAAAA==">SUM IDENTIFIED AS UB IS A PASSENGER SERVICE CHARGE</FareNote>
+    <FareNote Key="MCRmDEUqWDKA/mfLBAAAAA==">RATE USED IN EQU TOTAL IS BSR 1USD - 85BDT</FareNote>
+    <FareNote Key="MCRmDEUqWDKAAnfLBAAAAA==">LAST DATE TO PURCHASE TICKET: 06JUN22 DAC</FareNote>
+    <FareNote Key="MCRmDEUqWDKABnfLBAAAAA==">FARE HAS A PLATING CARRIER RESTRICTION</FareNote>
+    <FareNote Key="MCRmDEUqWDKACnfLBAAAAA==">E-TKT REQUIRED</FareNote>
+    <FareNote Key="MCRmDEUqWDKADnfLBAAAAA==">TICKETING FEES MAY APPLY</FareNote>
+    <HostToken Key="MCRmDEUqWDKAIkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10101ADT00  01KEXESBD1                              0200010002#GFB200010101NADTV3004BD100010000899#GFMCXES004NBD10 EK ADTKEXESBD1</HostToken>
+    <HostToken Key="MCRmDEUqWDKAJkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10101ADT00  02KEXESBD1                              0200030004#GFB200010102NADTV3004BD100010000899#GFMCXES004NBD10 EK ADTKEXESBD1</HostToken>
+    <HostToken Key="MCRmDEUqWDKAKkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10202CNN00  01KEXESBD1                              0200010002#GFB200020201NCNNV3004BD100010000899100006846#GFMCXES004NBD10DEK CNNKEXESBD1</HostToken>
+    <HostToken Key="MCRmDEUqWDKALkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10202CNN00  02KEXESBD1                              0200030004#GFB200020202NCNNV3004BD100010000899100006846#GFMCXES004NBD10DEK CNNKEXESBD1</HostToken>
+    <HostToken Key="MCRmDEUqWDKAMkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10303INF00  01KEXESBD1                              0200010002#GFB200030301NINFV3004BD100010000899100372863#GFMCXES004NBD10DEK INFKEXESBD1</HostToken>
+    <HostToken Key="MCRmDEUqWDKANkfLBAAAAA==" xmlns="http://www.travelport.com/schema/common_v50_0">GFB10303INF00  02KEXESBD1                              0200030004#GFB200030302NINFV3004BD100010000899100372863#GFMCXES004NBD10DEK INFKEXESBD1</HostToken>
+  </AirPricingSolution>
+  <ActionStatus Type="TAW" TicketDate="2022-06-06T23:59:00.000+06:00" ProviderCode="1G" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <AirPricingTicketingModifiers xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirPricingInfoRef Key="MCRmDEUqWDKAOkfLBAAAAA==" />
+    <TicketingModifiers>
+      <Commission Level="Fare" Type="PercentBase" Percentage="7.00" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </TicketingModifiers>
+  </AirPricingTicketingModifiers>
+  <AirPricingTicketingModifiers xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirPricingInfoRef Key="MCRmDEUqWDKAHlfLBAAAAA==" />
+    <TicketingModifiers>
+      <Commission Level="Fare" Type="PercentBase" Percentage="7.00" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </TicketingModifiers>
+  </AirPricingTicketingModifiers>
+  <AirPricingTicketingModifiers xmlns="http://www.travelport.com/schema/air_v50_0">
+    <AirPricingInfoRef Key="MCRmDEUqWDKA/lfLBAAAAA==" />
+    <TicketingModifiers>
+      <Commission Level="Fare" Type="PercentBase" Percentage="7.00" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </TicketingModifiers>
+  </AirPricingTicketingModifiers>
+</AirCreateReservationReq>

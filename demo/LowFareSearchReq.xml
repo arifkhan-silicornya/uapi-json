@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-16"?>
+<LowFareSearchReq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TraceId="07f3360f-b597-440c-8a99-6337cb6f0d94" AuthorizedBy="user" TargetBranch="123456" SolutionResult="true">
+  <BillingPointOfSaleInfo OriginApplication="UAPI" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <SearchAirLeg xmlns="http://www.travelport.com/schema/air_v50_0">
+    <SearchOrigin>
+      <CityOrAirport Code="DAC" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </SearchOrigin>
+    <SearchDestination>
+      <CityOrAirport Code="LHR" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </SearchDestination>
+    <SearchDepTime PreferredTime="2022-06-27" />
+    <AirLegModifiers>
+      <PreferredCabins>
+        <CabinClass Type="Economy" xmlns="http://www.travelport.com/schema/common_v50_0" />
+      </PreferredCabins>
+    </AirLegModifiers>
+  </SearchAirLeg>
+  <SearchAirLeg xmlns="http://www.travelport.com/schema/air_v50_0">
+    <SearchOrigin>
+      <CityOrAirport Code="LHR" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </SearchOrigin>
+    <SearchDestination>
+      <CityOrAirport Code="DAC" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </SearchDestination>
+    <SearchDepTime PreferredTime="2022-06-30" />
+    <AirLegModifiers>
+      <PreferredCabins>
+        <CabinClass Type="Economy" xmlns="http://www.travelport.com/schema/common_v50_0" />
+      </PreferredCabins>
+    </AirLegModifiers>
+  </SearchAirLeg>
+  <AirSearchModifiers xmlns="http://www.travelport.com/schema/air_v50_0">
+    <PreferredProviders>
+      <Provider Code="1G" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </PreferredProviders>
+    <PreferredCabins>
+      <CabinClass Type="Economy" xmlns="http://www.travelport.com/schema/common_v50_0" />
+    </PreferredCabins>
+    <FlightType MaxStops="3" />
+  </AirSearchModifiers>
+  <AirPricingModifiers FaresIndicator="PublicAndPrivateFares" xmlns="http://www.travelport.com/schema/air_v50_0">
+    <ExemptTaxes />
+  </AirPricingModifiers>
+  <SearchPassenger Code="ADT" BookingTravelerRef="11" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <SearchPassenger Code="CNN" Age="6" BookingTravelerRef="21" xmlns="http://www.travelport.com/schema/common_v50_0" />
+  <SearchPassenger Code="INF" Age="1" BookingTravelerRef="31" xmlns="http://www.travelport.com/schema/common_v50_0" />
+</LowFareSearchReq>
