@@ -1,0 +1,1262 @@
+Request URL:  https://apac.universal-api.pp.travelport.com/B2BGateway/connect/uAPI/AirService
+Request XML:  
+<!--Release 8.1-->
+<!--Version Dated as of 15/Apr/2015 11:24:06-->
+<!--Air Pricing For Galileo(1G) with LFS CheckFlightDetails Request-->
+<soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header/>
+  <soap:Body>
+    <air:AirPriceReq
+            AuthorizedBy="user" CheckFlightDetails="true" TargetBranch="P7186508"
+            TraceId="mastermind" xmlns:air="http://www.travelport.com/schema/air_v47_0"
+      xmlns:com="http://www.travelport.com/schema/common_v47_0">
+      <com:BillingPointOfSaleInfo OriginApplication="UAPI" 
+        xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+        <air:AirItinerary>
+          <air:AirSegment ArrivalTime="2023-04-04T08:35:00.000+03:00"
+                                DepartureTime="2023-04-04T05:10:00.000+06:00"
+                                Carrier="GF"
+                                 ClassOfService="Q" 
+                                CabinClass="Economy"
+                                Origin="DAC"
+                                Destination="BAH"
+                                ETicketability="Yes"
+                                Equipment="789"
+                                FlightNumber="251"
+                                LinkAvailability="true"
+                                PolledAvailabilityOption="Polled avail exists"
+                                ProviderCode="1G"
+                                Key="0"
+                                Group="0">
+            <air:Connection/>
+          </air:AirSegment>
+          <air:AirSegment ArrivalTime="2023-04-04T11:50:00.000+04:00"
+                                DepartureTime="2023-04-04T09:35:00.000+03:00"
+                                Carrier="GF"
+                                 ClassOfService="Q" 
+                                CabinClass="Economy"
+                                Origin="BAH"
+                                Destination="AUH"
+                                ETicketability="Yes"
+                                Equipment="320"
+                                FlightNumber="542"
+                                LinkAvailability="true"
+                                PolledAvailabilityOption="Polled avail exists"
+                                ProviderCode="1G"
+                                Key="1"
+                                Group="0"></air:AirSegment>
+        </air:AirItinerary>
+        <air:AirPricingModifiers PlatingCarrier="GF" InventoryRequestType="DirectAccess"/>
+        <com:SearchPassenger Key="P_0" Code="ADT"  
+          xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+          <air:AirPricingCommand>
+            <air:AirSegmentPricingModifiers AirSegmentRef="0" FareBasisCode="QBLIT3BD">
+              <air:PermittedBookingCodes>
+                <air:BookingCode Code="Q" />
+              </air:PermittedBookingCodes>
+            </air:AirSegmentPricingModifiers>
+            <air:AirSegmentPricingModifiers AirSegmentRef="1" FareBasisCode="QBLIT3BD">
+              <air:PermittedBookingCodes>
+                <air:BookingCode Code="Q" />
+              </air:PermittedBookingCodes>
+            </air:AirSegmentPricingModifiers>
+          </air:AirPricingCommand>
+        </air:AirPriceReq>
+      </soap:Body>
+    </soap:Envelope>
+
+Response SOAP:  <SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Body>
+    <air:AirPriceRsp TraceId="mastermind" TransactionId="3D8D3FAE0A0D6A81BE745899D5BEB1BE" ResponseTime="752" 
+      xmlns:air="http://www.travelport.com/schema/air_v47_0" 
+      xmlns:common_v47_0="http://www.travelport.com/schema/common_v47_0">
+      <common_v47_0:ResponseMessage Code="710401" Type="Warning" ProviderCode="1G">Taxes returned at the FareInfo level are for informational purposes only, and may differ from those returned at the Itinerary/Passenger Type levels.</common_v47_0:ResponseMessage>
+      <air:AirItinerary>
+        <air:AirSegment Key="igCpzQBqWDKA3eC0BAAAAA==" Group="0" Carrier="GF" FlightNumber="251" ProviderCode="1G" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" FlightTime="385" TravelTime="385" Distance="2486" ClassOfService="Q" Equipment="789" ChangeOfPlane="false" OptionalServicesIndicator="false" LinkAvailability="true" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked">
+          <air:CodeshareInfo OperatingCarrier="GF">Gulf Air Company B.S.C</air:CodeshareInfo>
+          <air:FlightDetails Key="igCpzQBqWDKA4eC0BAAAAA==" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" FlightTime="385" TravelTime="385" Equipment="789" AutomatedCheckin="false">
+            <air:Meals>Breakfast</air:Meals>
+            <air:InFlightServices>Non-smoking</air:InFlightServices>
+          </air:FlightDetails>
+          <air:Connection/>
+        </air:AirSegment>
+        <air:AirSegment Key="igCpzQBqWDKA5eC0BAAAAA==" Group="0" Carrier="GF" FlightNumber="542" ProviderCode="1G" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" FlightTime="75" TravelTime="75" Distance="271" ClassOfService="Q" Equipment="320" ChangeOfPlane="false" OptionalServicesIndicator="false" LinkAvailability="true" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked">
+          <air:CodeshareInfo OperatingCarrier="GF">Gulf Air Company B.S.C</air:CodeshareInfo>
+          <air:FlightDetails Key="igCpzQBqWDKA6eC0BAAAAA==" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" FlightTime="75" TravelTime="75" Equipment="320" DestinationTerminal="1" AutomatedCheckin="false">
+            <air:Meals>SnackOrBrunch</air:Meals>
+            <air:InFlightServices>Non-smoking</air:InFlightServices>
+          </air:FlightDetails>
+        </air:AirSegment>
+      </air:AirItinerary>
+      <air:AirPriceResult>
+        <air:AirPricingSolution Key="igCpzQBqWDKA7eC0BAAAAA==" TotalPrice="BDT41544" BasePrice="USD330.00" ApproximateTotalPrice="BDT41544" ApproximateBasePrice="BDT30720" EquivalentBasePrice="BDT30720" Taxes="BDT10824" Fees="BDT0" ApproximateTaxes="BDT10824" QuoteDate="2022-11-03">
+          <air:AirSegmentRef Key="igCpzQBqWDKA3eC0BAAAAA=="/>
+          <air:AirSegmentRef Key="igCpzQBqWDKA5eC0BAAAAA=="/>
+          <air:AirPricingInfo Key="igCpzQBqWDKA9eC0BAAAAA==" TotalPrice="BDT41544" BasePrice="USD330.00" ApproximateTotalPrice="BDT41544" ApproximateBasePrice="BDT30720" EquivalentBasePrice="BDT30720" ApproximateTaxes="BDT10824" Taxes="BDT10824" LatestTicketingTime="2023-04-04T23:59:00.000+06:00" PricingMethod="Guaranteed" Refundable="true" IncludesVAT="false" ETicketability="Yes" ProviderCode="1G">
+            <air:FareInfo Key="igCpzQBqWDKAIfC0BAAAAA==" FareBasis="QBLIT3BD" PassengerTypeCode="ADT" Origin="DAC" Destination="AUH" EffectiveDate="2022-11-03T18:52:00.000+06:00" DepartureDate="2023-04-04" Amount="BDT30720" NegotiatedFare="false" NotValidBefore="2023-04-04" NotValidAfter="2023-04-04" TaxAmount="BDT10824.00">
+              <common_v47_0:Endorsement Value="NON END/VALID ON GF ONLY"/>
+              <common_v47_0:Endorsement Value="ANY TIME NO CHG"/>
+              <common_v47_0:Endorsement Value="NO REF"/>
+              <air:FareRuleKey FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" ProviderCode="1G">6UUVoSldxwixpCFWV2VAoMbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA7KQB5l+S1sZxWa1uaqI55k3aSkvhp2ybWgQpKfuH0nKi7OANlYoJx/AyGqh8JIaqM5lDcu8j9UYGuY7gAKl+0tgPwKrVdVkqer/bRGkSYBeVvL0gTWvGVKnsahilB5/WJLKVanbw7tLxzQudJtkeTb1lFNJ928fq4B1xjSbRrjKTicpvYbmY4Wr6XufjmxNId1WgwCrt3HCir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJuedM5Dut5bCrcOHIC1171rVQ5p4M1bqDUX6VQuRmICw=</air:FareRuleKey>
+              <air:Brand Key="igCpzQBqWDKAIfC0BAAAAA==" BrandID="1114672" Name="ECONOMY LIGHT" UpSellBrandFound="false" Carrier="GF" BrandTier="0001">
+                <air:Title Type="External" LanguageCode="EN">Economy Light</air:Title>
+                <air:Title Type="Short" LanguageCode="EN">ECOLITE</air:Title>
+                <air:Text Type="ATPCO" LanguageCode="EN">THE MOST AFFORDABLE CHOICE WITH LESS FLEXIBILITYAND SERVICES</air:Text>
+                <air:Text Type="MarketingConsumer" LanguageCode="EN">ECONOMY LIGHT - the most affordable choice for customers who require less flexibility and services but who still wish to enjoy the full Gulf Air experience
+&#8226; Highest charges for changes, cancellations or refunds
+&#8226; First checked bag included
+&#8226; Additional fees for advance seat selection
+
+Choose our SMART fare for more flexibility, a free second checked bag and free standard seat selection.
+
+* Cabin interior and features may not be exactly as shown
+
+* Please refer to detailed fare rules for more information
+* Please note that if the flight is operated by another airline then the onboard product or service may be different to that described above</air:Text>
+                <air:Text Type="MarketingAgent" LanguageCode="EN">ECONOMY LIGHT - our most restrictive fare.
+&#8226; Highest charges for changes, cancellations or refunds
+&#8226; First checked bag included
+&#8226; Additional fees for advance seat selection
+
+
+Choose our SMART fare for more flexibility, a free second checked bag and free standard seat selection.
+
+* Cabin interior and features may not be exactly as shown
+
+* Please refer to detailed fare rules for more information
+* Please note that if the flight is operated by another airline then the onboard product or service may be different to that described above</air:Text>
+                <air:Text Type="Strapline" LanguageCode="EN">Economy Light</air:Text>
+                <air:ImageLocation Type="Consumer" ImageWidth="1400" ImageHeight="800">https://cdn.travelport.com/gulfair/GF_general_large_157980.jpg</air:ImageLocation>
+                <air:ImageLocation Type="Agent" ImageWidth="150" ImageHeight="150">https://cdn.travelport.com/gulfair/GF_general_medium_157979.jpg</air:ImageLocation>
+                <air:OptionalServices>
+                  <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0FA" Key="igCpzQBqWDKAMfC0BAAAAA==" Chargeable="Included in the brand" OptionalServicesRuleRef="igCpzQBqWDKANfC0BAAAAA==" Tag="Checked Baggage" DisplayOrder="1">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Checked Baggage 2x23kg</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Chargeable Baggage"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Checked Baggage 2x23kg</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">2 x 23KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">2 x 23KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Checked Baggage 2x23kg</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">2x23kg</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0MZ" Key="igCpzQBqWDKAOfC0BAAAAA==" SecondaryType="CY" Chargeable="Included in the brand" OptionalServicesRuleRef="igCpzQBqWDKAPfC0BAAAAA==" Tag="Carry On Hand Baggage" DisplayOrder="2">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Cabin Bags 6kg</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Chargeable Baggage"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Cabin Bags</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">1 bag at 6KG
+
+Each bag max 45 x 40 x 30cm</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">1 bag at 6KG
+
+Each bag max 45 x 40 x 30cm</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Cabin Bags 6kg</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Cabin Bags</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0FM" Key="igCpzQBqWDKAQfC0BAAAAA==" Chargeable="Not offered" OptionalServicesRuleRef="igCpzQBqWDKARfC0BAAAAA==" Tag="Checked Baggage" DisplayOrder="1">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Checked Baggage 2x32kg</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Chargeable Baggage"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Checked Baggage 2x32kg</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">2 x 32KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">2 x 32KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Checked Baggage 2x32kg</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Checked Ba</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="01R" Key="igCpzQBqWDKASfC0BAAAAA==" SecondaryType="CY" Chargeable="Not offered" OptionalServicesRuleRef="igCpzQBqWDKATfC0BAAAAA==" Tag="Carry On Hand Baggage" DisplayOrder="2">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Cabin Bags 9kg</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Chargeable Baggage"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Cabin Bags</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">1 bag at 9KG
+
+Each bag max 55 x 40 x 30cm</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">1 bag at 9KG
+
+Each bag max 55 x 40 x 30cm</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Cabin Bags 9kg</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Cabin Bags</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06B" Key="igCpzQBqWDKAUfC0BAAAAA==" SecondaryType="FR" Chargeable="Included in the brand" Tag="Mileage Accrual" DisplayOrder="20">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>50 percent miles earned</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">50 percent miles earned</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Light: 50 percent miles earned</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Light: 50 percent miles earned</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">50 percent miles earned</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">50 percent</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="056" Key="igCpzQBqWDKAVfC0BAAAAA==" SecondaryType="RF" Chargeable="Available for a charge" Tag="Refund" DisplayOrder="4">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Refunds</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157984.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157984.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">Refunds</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Refunds: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Refunds: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Refunds</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Refunds</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="050" Key="igCpzQBqWDKAWfC0BAAAAA==" SecondaryType="SE" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Extra Legroom Seat</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">Extra Legroom Seat</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Stretch out with our Extra Legroom seats providing additional seat pitch 
+
+Located in economy class with generous space and extra legroom.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.
+
+Extra legroom seats are subject to availability, terms &amp; conditions and other eligibility requirements.</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Stretch out with our Extra Legroom seats providing additional seat pitch 
+
+Located in economy class with generous space and extra legroom.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.
+
+Extra legroom seats are subject to availability, terms &amp; conditions and other eligibility requirements.</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Extra Legroom Seat</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Extra Legr</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="05Z" Key="igCpzQBqWDKAXfC0BAAAAA==" SecondaryType="SE" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Preferred Seat</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">Preferred Seat</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Select a Preferred Seat and sit at the front of the cabin enabling a speedy exit from the aircraft on arrival.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Select a Preferred Seat and sit at the front of the cabin enabling a speedy exit from the aircraft on arrival.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Preferred Seat</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Preferred</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="059" Key="igCpzQBqWDKAYfC0BAAAAA==" SecondaryType="VC" Chargeable="Available for a charge" Tag="Rebooking" DisplayOrder="3">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Changes</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157991.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157991.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">Changes</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Changes: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Changes: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Changes</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Changes</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06R" Key="igCpzQBqWDKAZfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>125 percent miles earned</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">125 percent miles earned</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Flex: 125 percent miles earned</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Flex: 125 percent miles earned</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">125 percent miles earned</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">125 percen</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06N" Key="igCpzQBqWDKAafC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>200 percent miles earned</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">200 percent miles earned</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Smart: 200 percent miles earned</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Smart: 200 percent miles earned</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">200 percent miles earned</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">200 percen</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06H" Key="igCpzQBqWDKAbfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>250 percent miles earned</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">250 percent miles earned</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Flex: 250 percent miles earned</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Flex: 250 percent miles earned</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">250 percent miles earned</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">250 percen</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06C" Key="igCpzQBqWDKAcfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>75 percent miles earned</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:Text Type="Strapline" LanguageCode="EN">75 percent miles earned</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Smart: 75 percent miles earned</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Smart: 75 percent miles earned</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">75 percent miles earned</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">75 percent</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="PreReservedSeatAssignment" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0B5" Key="igCpzQBqWDKAdfC0BAAAAA==" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Standard Seat</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Standard Seat</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Do you prefer window, aisle or just seats together?  Pre-book your required seat in advance for a small fee.
+
+Where the flight is operated by another airline, options to pre-assign seats may differ.</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Do you prefer window, aisle or just seats together?  Pre-book your required seat in advance for a small fee.
+
+Where the flight is operated by another airline, options to pre-assign seats may differ.</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Standard Seat</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Standard</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="MealOrBeverage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0B3" Key="igCpzQBqWDKAefC0BAAAAA==" Chargeable="Included in the brand" Tag="Meals and Beverages" DisplayOrder="6">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Meals &amp; Beverages</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157990.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157990.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Meals</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Your on board dining experience includes:
+
+&#8226; Tasty hot meals with a choice of up to three main courses
+
+&#8226; Light snacks and a choice of hot beverages
+
+&#8226; Complimentary bar service including a range of beers, wines, spirits and soft drinks (excluding flights to/from Saudi Arabia, Kuwait and Iraq)
+
+* Product offering may vary by destination</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Your on board dining experience includes:
+
+&#8226; Tasty hot meals with a choice of up to three main courses
+
+&#8226; Light snacks and a choice of hot beverages
+
+&#8226; Complimentary bar service including a range of beers, wines, spirits and soft drinks (excluding flights to/from Saudi Arabia, Kuwait and Iraq)
+
+* Product offering may vary by destination</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Meals &amp; Beverages</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Meals &amp; Be</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="MealOrBeverage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0LO" Key="igCpzQBqWDKAffC0BAAAAA==" Chargeable="Not offered" Tag="Meals and Beverages" DisplayOrder="6">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Premium Meals &amp; Beverages</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157989.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157989.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Meals &amp; Beverages</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Our inflight menus are specially created to reflect the culinary influences of the regions we fly to.  Explore our range of wine, spirits and beverages to enhance your meal.
+
+On long-haul flights, Gulf Air goes the extra mile to provide you individual attention from our inflight Sky Chef who will personally prepare your meal.</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Our inflight menus are specially created to reflect the culinary influences of the regions we fly to.  Explore our range of wine, spirits and beverages to enhance your meal.
+
+On long-haul flights, Gulf Air goes the extra mile to provide you individual attention from our inflight Sky Chef who will personally prepare your meal.</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Premium Meals &amp; Beverages</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Meals &amp; Be</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="InFlightEntertainment" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0CL" Key="igCpzQBqWDKAgfC0BAAAAA==" SecondaryType="IT" Chargeable="Available for a charge" Tag="WiFi" DisplayOrder="7">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>WiFi</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157986.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157986.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">WiFi</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Available on all aircraft operated by our Boeing 787 and Airbus A321LR fleet</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Available on all aircraft operated by our Boeing 787 and Airbus A321LR fleet</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">WiFi</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">WiFi</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="Lounge" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0BX" Key="igCpzQBqWDKAhfC0BAAAAA==" Chargeable="Available for a charge" Tag="Lounge Access" DisplayOrder="11">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Lounge</common_v47_0:Description>
+                      <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157982.jpg"/>
+                      <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157982.jpg"/>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Lounge</air:Text>
+                    <air:Text Type="MarketingAgent" LanguageCode="EN">Designed to reflect the essence of Gulf Air and its traditions of hospitality, the Gulf Air lounge at Bahrain International Airport features personalised service in a contemporary setting. Key features:
+
+&#8226; 'The Dining Room' a new restaurant concept for Falcon Gold passengers wishing to dine before their flight, leaving their flight free to rest or work
+&#8226; Wireless Internet Access
+&#8226; Quiet room with five chaise lounges offers privacy and comfort for total relaxation
+&#8226; Shower facilities for male and female guests
+&#8226; Prayer rooms</air:Text>
+                    <air:Text Type="MarketingConsumer" LanguageCode="EN">Designed to reflect the essence of Gulf Air and its traditions of hospitality, the Gulf Air lounge at Bahrain International Airport features personalised service in a contemporary setting. Key features:
+
+&#8226; 'The Dining Room' a new restaurant concept for Falcon Gold passengers wishing to dine before their flight, leaving their flight free to rest or work
+&#8226; Wireless Internet Access
+&#8226; Quiet room with five chaise lounges offers privacy and comfort for total relaxation
+&#8226; Shower facilities for male and female guests
+&#8226; Prayer rooms</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Lounge</air:Title>
+                    <air:Title Type="Short" LanguageCode="EN">Lounge</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalService Type="TravelServices" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="03P" Key="igCpzQBqWDKAifC0BAAAAA==" SecondaryType="PO" Chargeable="Not offered" Tag="Priority Services - Check In" DisplayOrder="12">
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                    <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                    <common_v47_0:ServiceInfo>
+                      <common_v47_0:Description>Priority Check In</common_v47_0:Description>
+                    </common_v47_0:ServiceInfo>
+                    <air:EMD AssociatedItem="Flight"/>
+                    <air:Text Type="Strapline" LanguageCode="EN">Priority Check In</air:Text>
+                    <air:Title Type="External" LanguageCode="EN">Priority Check In</air:Title>
+                  </air:OptionalService>
+                  <air:OptionalServiceRules Key="igCpzQBqWDKANfC0BAAAAA==">
+                    <common_v47_0:Remarks>Y,2,KG,23,BAG</common_v47_0:Remarks>
+                  </air:OptionalServiceRules>
+                  <air:OptionalServiceRules Key="igCpzQBqWDKAPfC0BAAAAA==">
+                    <common_v47_0:Remarks>Y,1,KG,6,CY - W30,H40,L45,CM</common_v47_0:Remarks>
+                  </air:OptionalServiceRules>
+                  <air:OptionalServiceRules Key="igCpzQBqWDKARfC0BAAAAA==">
+                    <common_v47_0:Remarks>J,2,KG,32,BAG</common_v47_0:Remarks>
+                  </air:OptionalServiceRules>
+                  <air:OptionalServiceRules Key="igCpzQBqWDKATfC0BAAAAA==">
+                    <common_v47_0:Remarks>Y,1,KG,9,CY - W30,H40,L55,CM</common_v47_0:Remarks>
+                  </air:OptionalServiceRules>
+                </air:OptionalServices>
+              </air:Brand>
+            </air:FareInfo>
+            <air:BookingInfo BookingCode="Q" CabinClass="Economy" FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" SegmentRef="igCpzQBqWDKA3eC0BAAAAA==" HostTokenRef="igCpzQBqWDKA8eC0BAAAAA=="/>
+            <air:BookingInfo BookingCode="Q" CabinClass="Economy" FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" SegmentRef="igCpzQBqWDKA5eC0BAAAAA==" HostTokenRef="igCpzQBqWDKA8eC0BAAAAA=="/>
+            <air:TaxInfo Category="BD" Amount="BDT500" Key="igCpzQBqWDKA+eC0BAAAAA=="/>
+            <air:TaxInfo Category="OW" Amount="BDT2000" Key="igCpzQBqWDKA/eC0BAAAAA=="/>
+            <air:TaxInfo Category="P7" Amount="BDT931" Key="igCpzQBqWDKAAfC0BAAAAA=="/>
+            <air:TaxInfo Category="P8" Amount="BDT931" Key="igCpzQBqWDKABfC0BAAAAA=="/>
+            <air:TaxInfo Category="UT" Amount="BDT3000" Key="igCpzQBqWDKACfC0BAAAAA=="/>
+            <air:TaxInfo Category="BH" Amount="BDT248" Key="igCpzQBqWDKADfC0BAAAAA=="/>
+            <air:TaxInfo Category="HM" Amount="BDT124" Key="igCpzQBqWDKAEfC0BAAAAA=="/>
+            <air:TaxInfo Category="ZR" Amount="BDT127" Key="igCpzQBqWDKAFfC0BAAAAA=="/>
+            <air:TaxInfo Category="E5" Amount="BDT355" Key="igCpzQBqWDKAGfC0BAAAAA=="/>
+            <air:TaxInfo Category="YR" Amount="BDT2608" Key="igCpzQBqWDKAHfC0BAAAAA=="/>
+            <air:FareCalc>DAC GF X/BAH GF AUH 330.00QBLIT3BD NUC330.00END ROE1.0</air:FareCalc>
+            <air:PassengerType Code="ADT"/>
+            <air:ChangePenalty PenaltyApplies="Anytime">
+              <air:Amount>BDT9309.0</air:Amount>
+            </air:ChangePenalty>
+            <air:CancelPenalty PenaltyApplies="Anytime">
+              <air:Amount>BDT11636</air:Amount>
+            </air:CancelPenalty>
+            <air:BaggageAllowances>
+              <air:BaggageAllowanceInfo TravelerType="ADT" Origin="DAC" Destination="AUH" Carrier="GF">
+                <air:URLInfo>
+                  <air:URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/GF</air:URL>
+                </air:URLInfo>
+                <air:TextInfo>
+                  <air:Text>2P</air:Text>
+                  <air:Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</air:Text>
+                </air:TextInfo>
+                <air:BagDetails ApplicableBags="1stChecked" BasePrice="BDT0" ApproximateBasePrice="BDT0" TotalPrice="BDT0" ApproximateTotalPrice="BDT0">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>UPTO50LB/23KG AND UPTO62LI/158LCM</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:BagDetails>
+                <air:BagDetails ApplicableBags="2ndChecked" BasePrice="BDT0" ApproximateBasePrice="BDT0" TotalPrice="BDT0" ApproximateTotalPrice="BDT0">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>UPTO50LB/23KG AND UPTO62LI/158LCM</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:BagDetails>
+              </air:BaggageAllowanceInfo>
+              <air:CarryOnAllowanceInfo Origin="DAC" Destination="BAH" Carrier="GF">
+                <air:TextInfo>
+                  <air:Text>6K</air:Text>
+                </air:TextInfo>
+                <air:CarryOnDetails ApplicableCarryOnBags="1">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:CarryOnDetails>
+                <air:CarryOnDetails ApplicableCarryOnBags="2">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:CarryOnDetails>
+              </air:CarryOnAllowanceInfo>
+              <air:CarryOnAllowanceInfo Origin="BAH" Destination="AUH" Carrier="GF">
+                <air:TextInfo>
+                  <air:Text>7K</air:Text>
+                </air:TextInfo>
+                <air:CarryOnDetails ApplicableCarryOnBags="1">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:CarryOnDetails>
+                <air:CarryOnDetails ApplicableCarryOnBags="2">
+                  <air:BaggageRestriction>
+                    <air:TextInfo>
+                      <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                    </air:TextInfo>
+                  </air:BaggageRestriction>
+                </air:CarryOnDetails>
+              </air:CarryOnAllowanceInfo>
+            </air:BaggageAllowances>
+          </air:AirPricingInfo>
+          <air:FareNote Key="igCpzQBqWDKAlfC0BAAAAA==">RATE USED IN EQU TOTAL IS BSR 1USD - 93.09BDT</air:FareNote>
+          <air:FareNote Key="igCpzQBqWDKAmfC0BAAAAA==">LAST DATE TO PURCHASE TICKET: 04APR23</air:FareNote>
+          <air:FareNote Key="igCpzQBqWDKAnfC0BAAAAA==">FARE HAS A PLATING CARRIER RESTRICTION</air:FareNote>
+          <air:FareNote Key="igCpzQBqWDKAofC0BAAAAA==">E-TKT REQUIRED</air:FareNote>
+          <air:FareNote Key="igCpzQBqWDKApfC0BAAAAA==">TICKETING FEES MAY APPLY</air:FareNote>
+          <common_v47_0:HostToken Key="igCpzQBqWDKA8eC0BAAAAA==">GFB10101ADT00  01QBLIT3BD                              0200010002#GFB200010101NADTV3033BDBR00100001994D#GFMCXOX033NBDBR GF ADTQBLIT3BD</common_v47_0:HostToken>
+        </air:AirPricingSolution>
+      </air:AirPriceResult>
+    </air:AirPriceRsp>
+  </SOAP:Body>
+</SOAP:Envelope>
+
+Request URL:  https://apac.universal-api.pp.travelport.com/B2BGateway/connect/uAPI/AirService
+Request XML:  
+<!--AirCreateReservationReq-->
+<!--Release 8.1-->
+<!--Version Dated as of 15/Apr/2015 11:24:07-->
+<soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header 
+    xmlns:univ="http://www.travelport.com/schema/universal_v47_0">
+    <univ:SupportedVersions airVersion="air_v47_0"/>
+  </soap:Header>
+  <soap:Body>
+    <univ:AirCreateReservationReq
+            AuthorizedBy="user" TraceId="mastermind"
+            RetainReservation="Both" TargetBranch="P7186508"
+            RuleName="SIP"
+            
+            RestrictWaitlist="false"
+            
+      xmlns:univ="http://www.travelport.com/schema/universal_v47_0"
+            
+      xmlns:com="http://www.travelport.com/schema/common_v47_0"
+            
+      xmlns:air="http://www.travelport.com/schema/air_v47_0"
+            
+      xmlns:common_v47_0="http://www.travelport.com/schema/common_v47_0"
+            >
+      <com:BillingPointOfSaleInfo OriginApplication="uAPI" />
+      <com:BookingTraveler Key="P_0" Age="0" DOB="2022-11-03" Gender="M" TravelerType="ADT">
+        <com:BookingTravelerName First="Arif" Last="Khan" Prefix="Mr"/>
+        <com:DeliveryInfo>
+          <com:ShippingAddress>
+            <com:AddressName></com:AddressName>
+            <com:Street>Basabo</com:Street>
+            <com:City>Dhaka</com:City>
+            <com:PostalCode>1212</com:PostalCode>
+            <com:Country>BD</com:Country>
+          </com:ShippingAddress>
+        </com:DeliveryInfo>
+        <com:PhoneNumber
+                            CountryCode="880"
+                            Location="DAC"
+                            Number="01749903970"
+                            Type="Other"
+                    />
+        <com:Email
+                            EmailID="arifkhanshanto123@gmail.com"
+                            Type="Other"
+                    />
+        <com:SSR Type="FOID" FreeText="PPBDEA123456" />
+        <com:SSR Type="DOCS" FreeText="P/BD/EA123456/BD/03Nov22/M/03Nov23/Khan/Arif" />
+      </com:BookingTraveler>
+      <air:AirPricingSolution Key="igCpzQBqWDKA7eC0BAAAAA==" TotalPrice="BDT41544" BasePrice="USD330.00" ApproximateTotalPrice="BDT41544" ApproximateBasePrice="BDT30720" EquivalentBasePrice="BDT30720" Taxes="BDT10824" Fees="BDT0" ApproximateTaxes="BDT10824" QuoteDate="2022-11-03" >
+        <air:AirSegment Key="igCpzQBqWDKA3eC0BAAAAA==" Group="0" Carrier="GF" FlightNumber="251" ProviderCode="1G" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" FlightTime="385" TravelTime="385" Distance="2486" ClassOfService="Q" Equipment="789" ChangeOfPlane="false" OptionalServicesIndicator="false" LinkAvailability="true" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked">
+          <air:CodeshareInfo OperatingCarrier="GF">Gulf Air Company B.S.C</air:CodeshareInfo>
+          <air:FlightDetails Key="igCpzQBqWDKA4eC0BAAAAA==" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" FlightTime="385" TravelTime="385" Equipment="789" AutomatedCheckin="false">
+            <air:Meals>Breakfast</air:Meals>
+            <air:InFlightServices>Non-smoking</air:InFlightServices>
+          </air:FlightDetails>
+          <air:Connection/>
+        </air:AirSegment>
+        <air:AirSegment Key="igCpzQBqWDKA5eC0BAAAAA==" Group="0" Carrier="GF" FlightNumber="542" ProviderCode="1G" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" FlightTime="75" TravelTime="75" Distance="271" ClassOfService="Q" Equipment="320" ChangeOfPlane="false" OptionalServicesIndicator="false" LinkAvailability="true" AvailabilityDisplayType="Fare Specific Fare Quote Unbooked">
+          <air:CodeshareInfo OperatingCarrier="GF">Gulf Air Company B.S.C</air:CodeshareInfo>
+          <air:FlightDetails Key="igCpzQBqWDKA6eC0BAAAAA==" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" FlightTime="75" TravelTime="75" Equipment="320" DestinationTerminal="1" AutomatedCheckin="false">
+            <air:Meals>SnackOrBrunch</air:Meals>
+            <air:InFlightServices>Non-smoking</air:InFlightServices>
+          </air:FlightDetails>
+        </air:AirSegment>
+        <air:AirPricingInfo Key="igCpzQBqWDKA9eC0BAAAAA==" TotalPrice="BDT41544" BasePrice="USD330.00" ApproximateTotalPrice="BDT41544" ApproximateBasePrice="BDT30720" EquivalentBasePrice="BDT30720" ApproximateTaxes="BDT10824" Taxes="BDT10824" LatestTicketingTime="2023-04-04T23:59:00.000+06:00" PricingMethod="Guaranteed" Refundable="true" IncludesVAT="false" ETicketability="Yes" ProviderCode="1G">
+          <air:FareInfo Key="igCpzQBqWDKAIfC0BAAAAA==" FareBasis="QBLIT3BD" PassengerTypeCode="ADT" Origin="DAC" Destination="AUH" EffectiveDate="2022-11-03T18:52:00.000+06:00" DepartureDate="2023-04-04" Amount="BDT30720" NegotiatedFare="false" NotValidBefore="2023-04-04" NotValidAfter="2023-04-04" TaxAmount="BDT10824.00">
+            <common_v47_0:Endorsement Value="NON END/VALID ON GF ONLY"/>
+            <common_v47_0:Endorsement Value="ANY TIME NO CHG"/>
+            <common_v47_0:Endorsement Value="NO REF"/>
+            <air:FareRuleKey FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" ProviderCode="1G">6UUVoSldxwixpCFWV2VAoMbKj3F8T9EyxsqPcXxP0TLGyo9xfE/RMsuWFfXVd1OAly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA7KQB5l+S1sZxWa1uaqI55k3aSkvhp2ybWgQpKfuH0nKi7OANlYoJx/AyGqh8JIaqM5lDcu8j9UYGuY7gAKl+0tgPwKrVdVkqer/bRGkSYBeVvL0gTWvGVKnsahilB5/WJLKVanbw7tLxzQudJtkeTb1lFNJ928fq4B1xjSbRrjKTicpvYbmY4Wr6XufjmxNId1WgwCrt3HCir5wkVQHOuKXLmrFneovA5cuasWd6i8Dly5qxZ3qLwOXLmrFneovA5cuasWd6i8Dc3mNX1GvOry3EdbqPPDZRsBAkLPMThzJuedM5Dut5bCrcOHIC1171rVQ5p4M1bqDUX6VQuRmICw=</air:FareRuleKey>
+            <air:Brand Key="igCpzQBqWDKAIfC0BAAAAA==" BrandID="1114672" Name="ECONOMY LIGHT" UpSellBrandFound="false" Carrier="GF" BrandTier="0001">
+              <air:Title Type="External" LanguageCode="EN">Economy Light</air:Title>
+              <air:Title Type="Short" LanguageCode="EN">ECOLITE</air:Title>
+              <air:Text Type="ATPCO" LanguageCode="EN">THE MOST AFFORDABLE CHOICE WITH LESS FLEXIBILITYAND SERVICES</air:Text>
+              <air:Text Type="MarketingConsumer" LanguageCode="EN">ECONOMY LIGHT - the most affordable choice for customers who require less flexibility and services but who still wish to enjoy the full Gulf Air experience
+• Highest charges for changes, cancellations or refunds
+• First checked bag included
+• Additional fees for advance seat selection
+
+Choose our SMART fare for more flexibility, a free second checked bag and free standard seat selection.
+
+* Cabin interior and features may not be exactly as shown
+
+* Please refer to detailed fare rules for more information
+* Please note that if the flight is operated by another airline then the onboard product or service may be different to that described above</air:Text>
+              <air:Text Type="MarketingAgent" LanguageCode="EN">ECONOMY LIGHT - our most restrictive fare.
+• Highest charges for changes, cancellations or refunds
+• First checked bag included
+• Additional fees for advance seat selection
+
+
+Choose our SMART fare for more flexibility, a free second checked bag and free standard seat selection.
+
+* Cabin interior and features may not be exactly as shown
+
+* Please refer to detailed fare rules for more information
+* Please note that if the flight is operated by another airline then the onboard product or service may be different to that described above</air:Text>
+              <air:Text Type="Strapline" LanguageCode="EN">Economy Light</air:Text>
+              <air:ImageLocation Type="Consumer" ImageWidth="1400" ImageHeight="800">https://cdn.travelport.com/gulfair/GF_general_large_157980.jpg</air:ImageLocation>
+              <air:ImageLocation Type="Agent" ImageWidth="150" ImageHeight="150">https://cdn.travelport.com/gulfair/GF_general_medium_157979.jpg</air:ImageLocation>
+              <air:OptionalServices>
+                <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0FA" Key="igCpzQBqWDKAMfC0BAAAAA==" Chargeable="Included in the brand" OptionalServicesRuleRef="igCpzQBqWDKANfC0BAAAAA==" Tag="Checked Baggage" DisplayOrder="1">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Checked Baggage 2x23kg</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Chargeable Baggage"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Checked Baggage 2x23kg</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">2 x 23KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">2 x 23KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Checked Baggage 2x23kg</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">2x23kg</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0MZ" Key="igCpzQBqWDKAOfC0BAAAAA==" SecondaryType="CY" Chargeable="Included in the brand" OptionalServicesRuleRef="igCpzQBqWDKAPfC0BAAAAA==" Tag="Carry On Hand Baggage" DisplayOrder="2">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Cabin Bags 6kg</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Chargeable Baggage"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Cabin Bags</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">1 bag at 6KG
+
+Each bag max 45 x 40 x 30cm</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">1 bag at 6KG
+
+Each bag max 45 x 40 x 30cm</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Cabin Bags 6kg</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Cabin Bags</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0FM" Key="igCpzQBqWDKAQfC0BAAAAA==" Chargeable="Not offered" OptionalServicesRuleRef="igCpzQBqWDKARfC0BAAAAA==" Tag="Checked Baggage" DisplayOrder="1">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Checked Baggage 2x32kg</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157987.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Chargeable Baggage"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Checked Baggage 2x32kg</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">2 x 32KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">2 x 32KG
+Each piece maximum linear dimension of 158cm
+
+* Additional benefits apply to Falconflyer Black, Gold and Silver members</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Checked Baggage 2x32kg</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Checked Ba</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Baggage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="01R" Key="igCpzQBqWDKASfC0BAAAAA==" SecondaryType="CY" Chargeable="Not offered" OptionalServicesRuleRef="igCpzQBqWDKATfC0BAAAAA==" Tag="Carry On Hand Baggage" DisplayOrder="2">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Cabin Bags 9kg</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157993.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Chargeable Baggage"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Cabin Bags</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">1 bag at 9KG
+
+Each bag max 55 x 40 x 30cm</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">1 bag at 9KG
+
+Each bag max 55 x 40 x 30cm</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Cabin Bags 9kg</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Cabin Bags</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06B" Key="igCpzQBqWDKAUfC0BAAAAA==" SecondaryType="FR" Chargeable="Included in the brand" Tag="Mileage Accrual" DisplayOrder="20">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>50 percent miles earned</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">50 percent miles earned</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Light: 50 percent miles earned</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Light: 50 percent miles earned</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">50 percent miles earned</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">50 percent</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="056" Key="igCpzQBqWDKAVfC0BAAAAA==" SecondaryType="RF" Chargeable="Available for a charge" Tag="Refund" DisplayOrder="4">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Refunds</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157984.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157984.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">Refunds</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Refunds: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Refunds: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Refunds</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Refunds</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="050" Key="igCpzQBqWDKAWfC0BAAAAA==" SecondaryType="SE" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Extra Legroom Seat</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">Extra Legroom Seat</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Stretch out with our Extra Legroom seats providing additional seat pitch 
+
+Located in economy class with generous space and extra legroom.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.
+
+Extra legroom seats are subject to availability, terms &amp; conditions and other eligibility requirements.</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Stretch out with our Extra Legroom seats providing additional seat pitch 
+
+Located in economy class with generous space and extra legroom.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.
+
+Extra legroom seats are subject to availability, terms &amp; conditions and other eligibility requirements.</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Extra Legroom Seat</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Extra Legr</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="05Z" Key="igCpzQBqWDKAXfC0BAAAAA==" SecondaryType="SE" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Preferred Seat</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">Preferred Seat</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Select a Preferred Seat and sit at the front of the cabin enabling a speedy exit from the aircraft on arrival.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Select a Preferred Seat and sit at the front of the cabin enabling a speedy exit from the aircraft on arrival.
+
+Available only on Gulf Air operated flights.  We strongly recommend early booking as seats are available on a first come, first served basis.</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Preferred Seat</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Preferred</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="059" Key="igCpzQBqWDKAYfC0BAAAAA==" SecondaryType="VC" Chargeable="Available for a charge" Tag="Rebooking" DisplayOrder="3">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Changes</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157991.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157991.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">Changes</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Changes: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Changes: varies based on fare selected.  
+
+* Please refer to fare rules for full terms and conditions</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Changes</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Changes</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06R" Key="igCpzQBqWDKAZfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>125 percent miles earned</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">125 percent miles earned</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Flex: 125 percent miles earned</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Flex: 125 percent miles earned</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">125 percent miles earned</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">125 percen</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06N" Key="igCpzQBqWDKAafC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>200 percent miles earned</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">200 percent miles earned</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Smart: 200 percent miles earned</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Smart: 200 percent miles earned</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">200 percent miles earned</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">200 percen</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06H" Key="igCpzQBqWDKAbfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>250 percent miles earned</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">250 percent miles earned</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Flex: 250 percent miles earned</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Falcon Gold Flex: 250 percent miles earned</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">250 percent miles earned</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">250 percen</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Branded Fares" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="06C" Key="igCpzQBqWDKAcfC0BAAAAA==" SecondaryType="FR" Chargeable="Not offered" Tag="Mileage Accrual" DisplayOrder="20">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>75 percent miles earned</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157981.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:Text Type="Strapline" LanguageCode="EN">75 percent miles earned</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Earn miles when you fly
+
+Economy Smart: 75 percent miles earned</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Earn miles when you fly
+
+Economy Smart: 75 percent miles earned</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">75 percent miles earned</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">75 percent</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="PreReservedSeatAssignment" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0B5" Key="igCpzQBqWDKAdfC0BAAAAA==" Chargeable="Available for a charge" Tag="Seat Assignment" DisplayOrder="5">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Standard Seat</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157985.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Standard Seat</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Do you prefer window, aisle or just seats together?  Pre-book your required seat in advance for a small fee.
+
+Where the flight is operated by another airline, options to pre-assign seats may differ.</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Do you prefer window, aisle or just seats together?  Pre-book your required seat in advance for a small fee.
+
+Where the flight is operated by another airline, options to pre-assign seats may differ.</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Standard Seat</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Standard</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="MealOrBeverage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0B3" Key="igCpzQBqWDKAefC0BAAAAA==" Chargeable="Included in the brand" Tag="Meals and Beverages" DisplayOrder="6">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Meals &amp; Beverages</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157990.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157990.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Meals</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Your on board dining experience includes:
+
+• Tasty hot meals with a choice of up to three main courses
+
+• Light snacks and a choice of hot beverages
+
+• Complimentary bar service including a range of beers, wines, spirits and soft drinks (excluding flights to/from Saudi Arabia, Kuwait and Iraq)
+
+* Product offering may vary by destination</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Your on board dining experience includes:
+
+• Tasty hot meals with a choice of up to three main courses
+
+• Light snacks and a choice of hot beverages
+
+• Complimentary bar service including a range of beers, wines, spirits and soft drinks (excluding flights to/from Saudi Arabia, Kuwait and Iraq)
+
+* Product offering may vary by destination</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Meals &amp; Beverages</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Meals &amp; Be</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="MealOrBeverage" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0LO" Key="igCpzQBqWDKAffC0BAAAAA==" Chargeable="Not offered" Tag="Meals and Beverages" DisplayOrder="6">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Premium Meals &amp; Beverages</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157989.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157989.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Meals &amp; Beverages</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Our inflight menus are specially created to reflect the culinary influences of the regions we fly to.  Explore our range of wine, spirits and beverages to enhance your meal.
+
+On long-haul flights, Gulf Air goes the extra mile to provide you individual attention from our inflight Sky Chef who will personally prepare your meal.</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Our inflight menus are specially created to reflect the culinary influences of the regions we fly to.  Explore our range of wine, spirits and beverages to enhance your meal.
+
+On long-haul flights, Gulf Air goes the extra mile to provide you individual attention from our inflight Sky Chef who will personally prepare your meal.</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Premium Meals &amp; Beverages</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Meals &amp; Be</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="InFlightEntertainment" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0CL" Key="igCpzQBqWDKAgfC0BAAAAA==" SecondaryType="IT" Chargeable="Available for a charge" Tag="WiFi" DisplayOrder="7">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>WiFi</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157986.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157986.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">WiFi</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Available on all aircraft operated by our Boeing 787 and Airbus A321LR fleet</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Available on all aircraft operated by our Boeing 787 and Airbus A321LR fleet</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">WiFi</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">WiFi</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="Lounge" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="0BX" Key="igCpzQBqWDKAhfC0BAAAAA==" Chargeable="Available for a charge" Tag="Lounge Access" DisplayOrder="11">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Lounge</common_v47_0:Description>
+                    <common_v47_0:MediaItem caption="Agent" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157982.jpg"/>
+                    <common_v47_0:MediaItem caption="Consumer" height="60" width="60" url="https://cdn.travelport.com/gulfair/GF_general_medium_157982.jpg"/>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Lounge</air:Text>
+                  <air:Text Type="MarketingAgent" LanguageCode="EN">Designed to reflect the essence of Gulf Air and its traditions of hospitality, the Gulf Air lounge at Bahrain International Airport features personalised service in a contemporary setting. Key features:
+
+• 'The Dining Room' a new restaurant concept for Falcon Gold passengers wishing to dine before their flight, leaving their flight free to rest or work
+• Wireless Internet Access
+• Quiet room with five chaise lounges offers privacy and comfort for total relaxation
+• Shower facilities for male and female guests
+• Prayer rooms</air:Text>
+                  <air:Text Type="MarketingConsumer" LanguageCode="EN">Designed to reflect the essence of Gulf Air and its traditions of hospitality, the Gulf Air lounge at Bahrain International Airport features personalised service in a contemporary setting. Key features:
+
+• 'The Dining Room' a new restaurant concept for Falcon Gold passengers wishing to dine before their flight, leaving their flight free to rest or work
+• Wireless Internet Access
+• Quiet room with five chaise lounges offers privacy and comfort for total relaxation
+• Shower facilities for male and female guests
+• Prayer rooms</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Lounge</air:Title>
+                  <air:Title Type="Short" LanguageCode="EN">Lounge</air:Title>
+                </air:OptionalService>
+                <air:OptionalService Type="TravelServices" CreateDate="2022-11-03T12:52:58.654+00:00" ServiceSubCode="03P" Key="igCpzQBqWDKAifC0BAAAAA==" SecondaryType="PO" Chargeable="Not offered" Tag="Priority Services - Check In" DisplayOrder="12">
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA3eC0BAAAAA=="/>
+                  <common_v47_0:ServiceData AirSegmentRef="igCpzQBqWDKA5eC0BAAAAA=="/>
+                  <common_v47_0:ServiceInfo>
+                    <common_v47_0:Description>Priority Check In</common_v47_0:Description>
+                  </common_v47_0:ServiceInfo>
+                  <air:EMD AssociatedItem="Flight"/>
+                  <air:Text Type="Strapline" LanguageCode="EN">Priority Check In</air:Text>
+                  <air:Title Type="External" LanguageCode="EN">Priority Check In</air:Title>
+                </air:OptionalService>
+                <air:OptionalServiceRules Key="igCpzQBqWDKANfC0BAAAAA==">
+                  <common_v47_0:Remarks>Y,2,KG,23,BAG</common_v47_0:Remarks>
+                </air:OptionalServiceRules>
+                <air:OptionalServiceRules Key="igCpzQBqWDKAPfC0BAAAAA==">
+                  <common_v47_0:Remarks>Y,1,KG,6,CY - W30,H40,L45,CM</common_v47_0:Remarks>
+                </air:OptionalServiceRules>
+                <air:OptionalServiceRules Key="igCpzQBqWDKARfC0BAAAAA==">
+                  <common_v47_0:Remarks>J,2,KG,32,BAG</common_v47_0:Remarks>
+                </air:OptionalServiceRules>
+                <air:OptionalServiceRules Key="igCpzQBqWDKATfC0BAAAAA==">
+                  <common_v47_0:Remarks>Y,1,KG,9,CY - W30,H40,L55,CM</common_v47_0:Remarks>
+                </air:OptionalServiceRules>
+              </air:OptionalServices>
+            </air:Brand>
+          </air:FareInfo>
+          <air:BookingInfo BookingCode="Q" CabinClass="Economy" FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" SegmentRef="igCpzQBqWDKA3eC0BAAAAA==" HostTokenRef="igCpzQBqWDKA8eC0BAAAAA=="/>
+          <air:BookingInfo BookingCode="Q" CabinClass="Economy" FareInfoRef="igCpzQBqWDKAIfC0BAAAAA==" SegmentRef="igCpzQBqWDKA5eC0BAAAAA==" HostTokenRef="igCpzQBqWDKA8eC0BAAAAA=="/>
+          <air:TaxInfo Category="BD" Amount="BDT500" Key="igCpzQBqWDKA+eC0BAAAAA=="/>
+          <air:TaxInfo Category="OW" Amount="BDT2000" Key="igCpzQBqWDKA/eC0BAAAAA=="/>
+          <air:TaxInfo Category="P7" Amount="BDT931" Key="igCpzQBqWDKAAfC0BAAAAA=="/>
+          <air:TaxInfo Category="P8" Amount="BDT931" Key="igCpzQBqWDKABfC0BAAAAA=="/>
+          <air:TaxInfo Category="UT" Amount="BDT3000" Key="igCpzQBqWDKACfC0BAAAAA=="/>
+          <air:TaxInfo Category="BH" Amount="BDT248" Key="igCpzQBqWDKADfC0BAAAAA=="/>
+          <air:TaxInfo Category="HM" Amount="BDT124" Key="igCpzQBqWDKAEfC0BAAAAA=="/>
+          <air:TaxInfo Category="ZR" Amount="BDT127" Key="igCpzQBqWDKAFfC0BAAAAA=="/>
+          <air:TaxInfo Category="E5" Amount="BDT355" Key="igCpzQBqWDKAGfC0BAAAAA=="/>
+          <air:TaxInfo Category="YR" Amount="BDT2608" Key="igCpzQBqWDKAHfC0BAAAAA=="/>
+          <air:FareCalc>DAC GF X/BAH GF AUH 330.00QBLIT3BD NUC330.00END ROE1.0</air:FareCalc>
+          <air:PassengerType BookingTravelerRef="P_0" Code="ADT" Age="0"/>
+          <air:ChangePenalty PenaltyApplies="Anytime">
+            <air:Amount>BDT9309.0</air:Amount>
+          </air:ChangePenalty>
+          <air:CancelPenalty PenaltyApplies="Anytime">
+            <air:Amount>BDT11636</air:Amount>
+          </air:CancelPenalty>
+          <air:BaggageAllowances>
+            <air:BaggageAllowanceInfo TravelerType="ADT" Origin="DAC" Destination="AUH" Carrier="GF">
+              <air:URLInfo>
+                <air:URL>VIEWTRIP.TRAVELPORT.COM/BAGGAGEPOLICY/GF</air:URL>
+              </air:URLInfo>
+              <air:TextInfo>
+                <air:Text>2P</air:Text>
+                <air:Text>BAGGAGE DISCOUNTS MAY APPLY BASED ON FREQUENT FLYER STATUS/ ONLINE CHECKIN/FORM OF PAYMENT/MILITARY/ETC.</air:Text>
+              </air:TextInfo>
+              <air:BagDetails ApplicableBags="1stChecked" BasePrice="BDT0" ApproximateBasePrice="BDT0" TotalPrice="BDT0" ApproximateTotalPrice="BDT0">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>UPTO50LB/23KG AND UPTO62LI/158LCM</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:BagDetails>
+              <air:BagDetails ApplicableBags="2ndChecked" BasePrice="BDT0" ApproximateBasePrice="BDT0" TotalPrice="BDT0" ApproximateTotalPrice="BDT0">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>UPTO50LB/23KG AND UPTO62LI/158LCM</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:BagDetails>
+            </air:BaggageAllowanceInfo>
+            <air:CarryOnAllowanceInfo Origin="DAC" Destination="BAH" Carrier="GF">
+              <air:TextInfo>
+                <air:Text>6K</air:Text>
+              </air:TextInfo>
+              <air:CarryOnDetails ApplicableCarryOnBags="1">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:CarryOnDetails>
+              <air:CarryOnDetails ApplicableCarryOnBags="2">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:CarryOnDetails>
+            </air:CarryOnAllowanceInfo>
+            <air:CarryOnAllowanceInfo Origin="BAH" Destination="AUH" Carrier="GF">
+              <air:TextInfo>
+                <air:Text>7K</air:Text>
+              </air:TextInfo>
+              <air:CarryOnDetails ApplicableCarryOnBags="1">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:CarryOnDetails>
+              <air:CarryOnDetails ApplicableCarryOnBags="2">
+                <air:BaggageRestriction>
+                  <air:TextInfo>
+                    <air:Text>CHGS MAY APPLY IF BAGS EXCEED TTL WT ALLOWANCE</air:Text>
+                  </air:TextInfo>
+                </air:BaggageRestriction>
+              </air:CarryOnDetails>
+            </air:CarryOnAllowanceInfo>
+          </air:BaggageAllowances>
+        </air:AirPricingInfo>
+        <air:FareNote Key="igCpzQBqWDKAlfC0BAAAAA==">RATE USED IN EQU TOTAL IS BSR 1USD - 93.09BDT</air:FareNote>
+        <air:FareNote Key="igCpzQBqWDKAmfC0BAAAAA==">LAST DATE TO PURCHASE TICKET: 04APR23</air:FareNote>
+        <air:FareNote Key="igCpzQBqWDKAnfC0BAAAAA==">FARE HAS A PLATING CARRIER RESTRICTION</air:FareNote>
+        <air:FareNote Key="igCpzQBqWDKAofC0BAAAAA==">E-TKT REQUIRED</air:FareNote>
+        <air:FareNote Key="igCpzQBqWDKApfC0BAAAAA==">TICKETING FEES MAY APPLY</air:FareNote>
+        <common_v47_0:HostToken Key="igCpzQBqWDKA8eC0BAAAAA==">GFB10101ADT00  01QBLIT3BD                              0200010002#GFB200010101NADTV3033BDBR00100001994D#GFMCXOX033NBDBR GF ADTQBLIT3BD</common_v47_0:HostToken>
+      </air:AirPricingSolution>
+      <com:ActionStatus Type="TAU" TicketDate="2022-11-03T21:52:59+06:00" ProviderCode="1G" />
+    </univ:AirCreateReservationReq>
+  </soap:Body>
+</soap:Envelope>
+
+Response SOAP:  <SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Body>
+    <universal:AirCreateReservationRsp TraceId="mastermind" TransactionId="3D8D4C560A0D6A81BE74589942A9F4D6" ResponseTime="2561" 
+      xmlns:universal="http://www.travelport.com/schema/universal_v47_0" 
+      xmlns:common_v47_0="http://www.travelport.com/schema/common_v47_0" 
+      xmlns:air="http://www.travelport.com/schema/air_v47_0">
+      <common_v47_0:ResponseMessage Code="0" Type="Warning" ProviderCode="1G">NO FARES</common_v47_0:ResponseMessage>
+      <common_v47_0:ResponseMessage Code="0" Type="Warning" ProviderCode="1G">Some of the requested AirPricingInfos could not be saved for the requested provider.</common_v47_0:ResponseMessage>
+      <common_v47_0:ResponseMessage Code="0" Type="Warning" ProviderCode="1G">3100 : NO PLATING CARRIER FOUND</common_v47_0:ResponseMessage>
+      <universal:UniversalRecord LocatorCode="1JC01I" Version="0" Status="Active">
+        <common_v47_0:BookingTraveler Key="igCpzQBqWDKASJD0BAAAAA==" TravelerType="ADT" Age="0" DOB="2022-11-03" Gender="M" ElStat="A">
+          <common_v47_0:BookingTravelerName Prefix="Mr" First="Arif" Last="Khan"/>
+          <common_v47_0:DeliveryInfo>
+            <common_v47_0:ShippingAddress Key="igCpzQBqWDKAXJD0BAAAAA==" ElStat="A">
+              <common_v47_0:AddressName>ARIFMR KHAN</common_v47_0:AddressName>
+              <common_v47_0:Street>Basabo</common_v47_0:Street>
+              <common_v47_0:City>Dhaka</common_v47_0:City>
+              <common_v47_0:PostalCode>1212</common_v47_0:PostalCode>
+              <common_v47_0:Country>BD</common_v47_0:Country>
+              <common_v47_0:ProviderReservationInfoRef Key="igCpzQBqWDKAoUD0BAAAAA=="/>
+            </common_v47_0:ShippingAddress>
+          </common_v47_0:DeliveryInfo>
+          <common_v47_0:PhoneNumber Key="igCpzQBqWDKATJD0BAAAAA==" Type="Other" Location="DAC" CountryCode="880" Number="01749903970" ElStat="A">
+            <common_v47_0:ProviderReservationInfoRef Key="igCpzQBqWDKAoUD0BAAAAA=="/>
+          </common_v47_0:PhoneNumber>
+          <common_v47_0:Email Key="igCpzQBqWDKAWJD0BAAAAA==" Type="Other" EmailID="arifkhanshanto123@gmail.com" ElStat="A">
+            <common_v47_0:ProviderReservationInfoRef Key="igCpzQBqWDKAoUD0BAAAAA=="/>
+          </common_v47_0:Email>
+          <common_v47_0:SSR Key="igCpzQBqWDKAVJD0BAAAAA==" Status="HK" Type="DOCS" FreeText="P/BD/00003456/BD/0000000/M/03NOV23/KHAN/ARIF -1KHAN/ARIFMR" Carrier="GF" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" ElStat="A"/>
+        </common_v47_0:BookingTraveler>
+        <common_v47_0:ActionStatus Key="igCpzQBqWDKAgJD0BAAAAA==" Type="TAU" TicketDate="2022-11-03T23:59:00.000+06:00" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" ProviderCode="1G" ElStat="A"/>
+        <universal:ProviderReservationInfo Key="igCpzQBqWDKAoUD0BAAAAA==" ProviderCode="1G" LocatorCode="2CPHVB" CreateDate="2022-11-03T12:53:03.711+00:00" ModifiedDate="2022-11-03T12:53:03.711+00:00" HostCreateDate="2022-11-03" OwningPCC="67G0"/>
+        <air:AirReservation LocatorCode="1JC02O" CreateDate="2022-11-03T12:53:03.343+00:00" ModifiedDate="2022-11-03T12:53:03.711+00:00">
+          <common_v47_0:SupplierLocator SupplierCode="GF" SupplierLocatorCode="OQAIVO" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" CreateDateTime="2022-11-03T12:53:00.000+00:00"/>
+          <common_v47_0:BookingTravelerRef Key="igCpzQBqWDKASJD0BAAAAA=="/>
+          <common_v47_0:ProviderReservationInfoRef Key="igCpzQBqWDKAoUD0BAAAAA=="/>
+          <air:AirSegment Key="igCpzQBqWDKA3eC0BAAAAA==" Group="0" Carrier="GF" CabinClass="Economy" FlightNumber="251" ProviderCode="1G" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" TravelTime="385" ClassOfService="Q" ETicketability="No" Equipment="789" MarriageGroup="1" Status="HK" ChangeOfPlane="false" GuaranteedPaymentCarrier="No" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" TravelOrder="1" ProviderSegmentOrder="1" OptionalServicesIndicator="false" LinkAvailability="true" ElStat="A">
+            <air:FlightDetails Key="igCpzQBqWDKAfUD0BAAAAA==" Origin="DAC" Destination="BAH" DepartureTime="2023-04-04T05:10:00.000+06:00" ArrivalTime="2023-04-04T08:35:00.000+03:00" FlightTime="385" TravelTime="385" Equipment="789" AutomatedCheckin="false" ElStat="C"/>
+            <air:Connection Duration="60"/>
+          </air:AirSegment>
+          <air:AirSegment Key="igCpzQBqWDKA5eC0BAAAAA==" Group="0" Carrier="GF" CabinClass="Economy" FlightNumber="542" ProviderCode="1G" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" TravelTime="75" ClassOfService="Q" ETicketability="No" Equipment="320" MarriageGroup="1" Status="HK" ChangeOfPlane="false" GuaranteedPaymentCarrier="No" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" TravelOrder="2" ProviderSegmentOrder="2" OptionalServicesIndicator="false" LinkAvailability="true" ElStat="A">
+            <air:FlightDetails Key="igCpzQBqWDKAgUD0BAAAAA==" Origin="BAH" Destination="AUH" DepartureTime="2023-04-04T09:35:00.000+03:00" ArrivalTime="2023-04-04T11:50:00.000+04:00" FlightTime="75" TravelTime="75" Equipment="320" DestinationTerminal="1" AutomatedCheckin="false" ElStat="C"/>
+            <common_v47_0:SellMessage>ARRIVES AUH TERMINAL 1</common_v47_0:SellMessage>
+            <common_v47_0:SellMessage>*010 EY 3155*</common_v47_0:SellMessage>
+            <common_v47_0:SellMessage>PERSONAL DATA WHICH IS PROVIDED TO US IN CONNECTION</common_v47_0:SellMessage>
+            <common_v47_0:SellMessage>WITH YOUR TRAVEL MAY BE PASSED TO GOVERNMENT AUTHORITIES</common_v47_0:SellMessage>
+            <common_v47_0:SellMessage>FOR BORDER CONTROL AND AVIATION SECURITY PURPOSES</common_v47_0:SellMessage>
+          </air:AirSegment>
+        </air:AirReservation>
+        <common_v47_0:AgencyInfo>
+          <common_v47_0:AgentAction ActionType="Created" AgentCode="uAPI8412215835-2a3c237a" BranchCode="P7186508" AgencyCode="S7186501" EventTime="2022-11-03T12:53:01.247+00:00"/>
+        </common_v47_0:AgencyInfo>
+        <common_v47_0:SSR Key="igCpzQBqWDKAhUD0BAAAAA==" Status="HK" Type="FOID" FreeText="/PPBDEA123456-1KHAN/ARIFMR" Carrier="GF" ProviderReservationInfoRef="igCpzQBqWDKAoUD0BAAAAA==" ElStat="C"/>
+      </universal:UniversalRecord>
+    </universal:AirCreateReservationRsp>
+  </SOAP:Body>
+</SOAP:Envelope>
+uAPI_Parse execution time: 2ms
+

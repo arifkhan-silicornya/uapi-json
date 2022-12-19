@@ -1,0 +1,113 @@
+Request URL:  https://apac.universal-api.pp.travelport.com/B2BGateway/connect/uAPI/AirService
+Request XML:  
+<!--Release 8.1-->
+<!--Version Dated as of 15/Apr/2015 11:24:06-->
+<!--Air Pricing For Galileo(1G) with LFS CheckFlightDetails Request-->
+<soap:Envelope 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header/>
+  <soap:Body>
+    <air:AirPriceReq
+            AuthorizedBy="user" CheckFlightDetails="true" TargetBranch="P7186508"
+            TraceId="mastermind"
+            
+      xmlns:air="http://www.travelport.com/schema/air_v47_0"
+            
+      xmlns:com="http://www.travelport.com/schema/common_v47_0">
+      <com:BillingPointOfSaleInfo OriginApplication="UAPI" 
+        xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+        <air:AirItinerary>
+          <air:AirSegment ArrivalTime="2023-02-14T12:15:00.000+05:30"
+                                DepartureTime="2023-02-14T10:20:00.000+06:00"
+                                Carrier="UK"
+                                 ClassOfService="V" 
+                                CabinClass="Economy"
+                                Origin="DAC"
+                                Destination="DEL"
+                                ETicketability="Yes"
+                                Equipment="321"
+                                FlightNumber="182"
+                                LinkAvailability="true"
+                                PolledAvailabilityOption="Polled avail exists"
+                                ProviderCode="1G"
+                                Key="0"
+                                Group="0">
+            <air:Connection/>
+          </air:AirSegment>
+          <air:AirSegment ArrivalTime="2023-02-14T17:40:00.000+05:30"
+                                DepartureTime="2023-02-14T15:30:00.000+05:30"
+                                Carrier="UK"
+                                 ClassOfService="Q" 
+                                CabinClass="Economy"
+                                Origin="DEL"
+                                Destination="BOM"
+                                ETicketability="Yes"
+                                Equipment="320"
+                                FlightNumber="933"
+                                LinkAvailability="true"
+                                PolledAvailabilityOption="Polled avail exists"
+                                ProviderCode="1G"
+                                Key="1"
+                                Group="0">
+            <air:Connection/>
+          </air:AirSegment>
+          <air:AirSegment ArrivalTime="2023-02-14T23:00:00.000+04:00"
+                                DepartureTime="2023-02-14T21:30:00.000+05:30"
+                                Carrier="UK"
+                                 ClassOfService="V" 
+                                CabinClass="Economy"
+                                Origin="BOM"
+                                Destination="AUH"
+                                ETicketability="Yes"
+                                Equipment="320"
+                                FlightNumber="255"
+                                LinkAvailability="true"
+                                PolledAvailabilityOption="Polled avail exists"
+                                ProviderCode="1G"
+                                Key="2"
+                                Group="0"></air:AirSegment>
+        </air:AirItinerary>
+        <air:AirPricingModifiers PlatingCarrier="UK" InventoryRequestType="DirectAccess"/>
+        <com:SearchPassenger Key="P_0" Code="ADT" Age="26" 
+          xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
+          <air:AirPricingCommand>
+            <air:AirSegmentPricingModifiers AirSegmentRef="0" FareBasisCode="VOBGYV">
+              <air:PermittedBookingCodes>
+                <air:BookingCode Code="V" />
+              </air:PermittedBookingCodes>
+            </air:AirSegmentPricingModifiers>
+            <air:AirSegmentPricingModifiers AirSegmentRef="1" FareBasisCode="VOBGYV">
+              <air:PermittedBookingCodes>
+                <air:BookingCode Code="Q" />
+              </air:PermittedBookingCodes>
+            </air:AirSegmentPricingModifiers>
+            <air:AirSegmentPricingModifiers AirSegmentRef="2" FareBasisCode="VOINYV">
+              <air:PermittedBookingCodes>
+                <air:BookingCode Code="V" />
+              </air:PermittedBookingCodes>
+            </air:AirSegmentPricingModifiers>
+          </air:AirPricingCommand>
+        </air:AirPriceReq>
+      </soap:Body>
+    </soap:Envelope>
+
+Response SOAP:  <SOAP:Envelope 
+  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Body>
+    <SOAP:Fault>
+      <faultcode>Server.System</faultcode>
+      <faultstring>Transaction Error: Procedure/5012</faultstring>
+      <detail>
+        <common_v47_0:ErrorInfo 
+          xmlns:common_v47_0="http://www.travelport.com/schema/common_v47_0">
+          <common_v47_0:Code>10</common_v47_0:Code>
+          <common_v47_0:Service>SYSTEM</common_v47_0:Service>
+          <common_v47_0:Type>System</common_v47_0:Type>
+          <common_v47_0:Description>Transaction failure.</common_v47_0:Description>
+          <common_v47_0:TransactionId>5735BE8A0A0D6A7F4694FD9B9AE01585</common_v47_0:TransactionId>
+          <common_v47_0:TraceId>mastermind</common_v47_0:TraceId>
+        </common_v47_0:ErrorInfo>
+      </detail>
+    </SOAP:Fault>
+  </SOAP:Body>
+</SOAP:Envelope>
