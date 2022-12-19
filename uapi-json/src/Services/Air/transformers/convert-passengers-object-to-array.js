@@ -6,7 +6,6 @@ module.exports = (params) => {
     if (number) {
       
       for (let i = 0; i < number; i += 1) {
-        UID = UID+1;
         list.push({
           ageCategory,
           child: (ageCategory === 'CNN'), // quickfix
@@ -14,6 +13,7 @@ module.exports = (params) => {
           infantWS: (ageCategory === 'INS'), // quickfix
           UUniqueID: UID,
         });
+        UID = UID+1;
       }
     }
   });

@@ -25,10 +25,11 @@ module.exports = (params) => {
     if (item.ageCategory === 'CNN') {
       item.isChild = true;
       item.dobString = birthSSR.format('DDMMMYY').toUpperCase();
+      item.ageCategory = "CNN";
       if (item.Age < 10) {
-        item.ageCategory = `CNN`;
+        item.NameRemarkageCategory = `C0${item.Age}`;
       } else {
-        item.ageCategory = `CNN`;
+        item.NameRemarkageCategory = `C${item.Age}`;
       }
     }
 

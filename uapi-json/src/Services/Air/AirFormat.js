@@ -95,6 +95,14 @@ function formatSegment(segment) {
         flightNumber: segment.FlightNumber,
         uapi_segment_ref: segment.Key,
         uapiSegmentReference: segment.Key,
+        FlightTime: segment.FlightTime,
+        Distance: segment.Distance,
+        ChangeOfPlane: segment.ChangeOfPlane,
+        ParticipantLevel: segment.ParticipantLevel,
+        PolledAvailabilityOption: segment.PolledAvailabilityOption,
+        OptionalServicesIndicator: segment.OptionalServicesIndicator,
+        AvailabilityDisplayType: segment.AvailabilityDisplayType,
+        AvailabilitySource:segment.AvailabilitySource,
     };
 
     if (segment['air:FlightDetails']) {

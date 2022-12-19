@@ -20,7 +20,6 @@ module.exports = `
                 <air:AirSegment ArrivalTime="{{arrival}}"
                                 DepartureTime="{{departure}}"
                                 Carrier="{{airline}}"
-                                {{#if bookingClass}} ClassOfService="{{bookingClass}}" {{/if}}
                                 CabinClass="{{serviceClass}}"
                                 Origin="{{from}}"
                                 Destination="{{to}}"
@@ -28,12 +27,18 @@ module.exports = `
                                 Equipment="{{plane}}"
                                 FlightNumber="{{flightNumber}}"
                                 LinkAvailability="true"
-                                PolledAvailabilityOption="Polled avail exists"
+                                PolledAvailabilityOption="{{PolledAvailabilityOption}}"
                                 ProviderCode="{{../provider}}"
-                                OptionalServicesIndicator="false"
-                                AvailabilitySource="A"
+                                FlightTime="{{FlightTime}}"
+                                Distance="{{Distance}}"
+                                ChangeOfPlane="{{ChangeOfPlane}}"
+                                ParticipantLevel="{{ParticipantLevel}}"
+                                OptionalServicesIndicator="{{OptionalServicesIndicator}}"
+                                AvailabilityDisplayType="{{AvailabilityDisplayType}}"
+                                AvailabilitySource="{{AvailabilitySource}}"
                                 Key="{{@index}}"
                                 Group="{{group}}">
+
                     {{#if transfer}}
                     <air:Connection/>
                     {{/if}}
@@ -53,7 +58,7 @@ module.exports = `
             <com:SearchPassenger 
                 BookingTravelerRef="mastermind_{{@index}}" 
                 Code="{{ageCategory}}" 
-                {{#if child}}Age="9"{{else if Age}}Age="{{Age}}"{{/if}} 
+                {{#if Age}}Age="{{Age}}"{{/if}} 
                 xmlns:com="http://www.travelport.com/schema/common_v47_0"/>
             {{/passengers}}
             <air:AirPricingCommand>

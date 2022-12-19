@@ -64,8 +64,9 @@ module.exports = `
                 {{/ssr}}
                 {{#if isChild}}
                 <com:NameRemark Key="P_{{@index}}">
-                    <com:RemarkData>DOB{{dobString}}</com:RemarkData>
+                    <com:RemarkData>P-{{NameRemarkageCategory}} DOB{{dobString}}</com:RemarkData>
                 </com:NameRemark>
+
                 {{/if}}
                 {{#if isInfant}}
                 <com:NameRemark Key="P_{{@index}}">

@@ -104,7 +104,7 @@ module.exports = `
             </air:AirSearchModifiers>
             {{#passengers}}
             <com:SearchPassenger 
-                BookingTravelerRef="mastermind_{{UUniqueID}}" 
+                BookingTravelerRef="P_{{UUniqueID}}" 
                 Code="{{ageCategory}}"
                 {{#if child}} Age="9"{{/if}} 
                 {{#if infantWOS}} Age="1"{{/if}} 
